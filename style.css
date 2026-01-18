@@ -63,7 +63,8 @@ ul.topnav li a:hover {
 
 .Body h2 {
   padding-left: 10px;
-  padding-top: 10px;
+  font-size: xx-large;
+  /*padding-top: 10px;*/
   color: #dddddd;
   text-shadow: 
     -1px -1px 0 #000,
@@ -74,7 +75,8 @@ ul.topnav li a:hover {
 
 .Body p {
   padding-left: 10px;
-  padding-top: 10px;
+  font-size: large;
+  /*padding-top: 10px;*/
   color: #dddddd;
   text-shadow: 
     -1px -1px 0 #000,
