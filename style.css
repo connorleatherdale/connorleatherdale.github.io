@@ -20,6 +20,15 @@ body {
   
   background-color: gray;
   
+  
+}
+
+.Header h1 {
+  text-shadow: 
+    -1px -1px 0 #f1f1f1,
+    1px -1px 0 #f1f1f1,
+    -1px 1px 0 #f1f1f1,
+    1px 1px 0 #f1f1f1;
 }
 
 ul.topnav {
@@ -28,6 +37,7 @@ ul.topnav {
   margin: 0;
   padding: 0;
   background-color: #333333;
+  
 }
 
 /* Style links in topnav */
@@ -36,12 +46,14 @@ ul.topnav li a {
   color: #f1f1f1;
   padding: 14px 16px;
   text-decoration: none;
+  border-radius: 5px;
 }
 
 /* Change color on hover */
 ul.topnav li a:hover {
   background-color: #dddddd;
   color: black;
+  border-radius: 5px;
 }
 
 .header div {
@@ -59,6 +71,7 @@ ul.topnav li a:hover {
   background-size: auto;
   border-style: solid;
   border-width: 2px;
+  border-radius: 5px;
   
 }
 
