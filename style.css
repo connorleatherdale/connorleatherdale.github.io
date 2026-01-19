@@ -137,6 +137,13 @@ ul.topnav li a:hover {
     1px 1px 0 #000;
 }
 
+.Body p > img {
+  
+  justify-self: left;
+  border: 1px solid #ddd;
+  
+}
+
 /*
 future plans
 
@@ -144,7 +151,7 @@ future plans
 - probably a section for all my photos, and examples of other things
 - probably should finish the section for socials too
 
-for the index page, have it so <h3> <a href="">"title"</a> links to the page, then briefly describe the page. Also potentially have it so it lists all "sub-pages" in the page on teh left hand side
+for the index page, have it so <h3> <a href="">"title"</a> links to the page, then briefly describe the page. Also potentially have it so it lists all "sub-pages" in the page on the left hand side
 
   elaborating; lets say i have a page for photos, when you click on a photo, it opens up teh sub-page, which is all about the photo
 
