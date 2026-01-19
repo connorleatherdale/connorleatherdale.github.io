@@ -1,1 +1,1 @@
-# connorleatherdale.github.io
+This is just for my personal website, thats all
