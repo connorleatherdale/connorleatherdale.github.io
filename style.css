@@ -155,18 +155,30 @@ ul.topnav li a:hover {
   
 }
 
-/*
-future plans
+ul.hotlink {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
-- work on a blog post section, probably to mostly yap about tornadoes and things
-- probably a section for all my photos, and examples of other things
-- probably should finish the section for socials too
+ul.hotlink li {
+  text-align: center;
+  
+  word-wrap:normal;
+  color: #dddddd;
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
 
-for the index page, have it so <h3> <a href="">"title"</a> links to the page, then briefly describe the page. Also potentially have it so it lists all "sub-pages" in the page on the left hand side
-
-  elaborating; lets say i have a page for photos, when you click on a photo, it opens up teh sub-page, which is all about the photo
-
-found a nice website to containerize the site, should help with organizing everything, since im having difficulties with it (tried working on it for a bit, but started to get frustereated (cant tell lol))
-
-https://www.w3schools.com/css/css_rwd_grid.asp
-*/
+ul.hotlink li a {
+  display: block;
+  color: #f1f1f1;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+}
