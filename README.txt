@@ -1,1 +1,0 @@
-Hosting my personal website, thats it
