@@ -18,7 +18,7 @@
     <body>
     <div class="Header">
         <div>
-            <h1>Connor Leatherdale - Blogs - Google Earth Project</h1>
+            <h1>Connor Leatherdale - Blogs - Damage Assesment Toolkit (DAT)</h1>
         </div>
         <ul class="topnav">
         <li><a href="../../../index.html">Home</a></li>
@@ -31,7 +31,7 @@
     </div>
 
     <div class="Body">
-        <h2>Table of Contents</h2>
+        <h2>Table of Contents And Links</h2>
         <ul>
             <li><a href="DAT.html#1">What is The Damage Assessment Toolkit (DAT)?</a></li>
             <li><a href="DAT.html#2">How to Use The DAT</a></li>
@@ -51,17 +51,32 @@
 
         <h2 id="2">How to Use The DAT</h2>
         <p>
-            <img loading="lazy" src="../../../Images/DAT/3.png" style="float: left;width: 600px;height: 337.50px;"> When you first open up the DAT, it will probably look something like this, a map of the world with some funky lines in the states. These funky lines are just the boundaries where each office has juristiction over, which is helpful when a tornado goes across these boundaries (and when a survey goes from in-depth to like one damage path, happens more than you think!). At the top of the page, we can see some buttons. Starting on the right, we have the buttons for selecting the time period. This allows us to see data from between 2 different dates. Typically, I tend to view, at most, 1 year at a time, since there can be so much data to load that the browser either crashes, or your pc freezes if you select a large set of data. To the left of this, there are several different buttons, for learning about the page, showing radar data of the time, seeing legend and layer lists, adding data, and filters. On the left side of the page are a few tools, including a search box to look up towns, counties or cities, a download tool (we will get to that later), a measurement tool, and a print and gallery tools. All of these tools are pretty self-explainatory. 
+            <img loading="lazy" src="../../../Images/DAT/3.png" style="float: left;width: 600px;height: 337.50px;"> When you first open up the DAT, it will probably look something like this, a map of the world with some funky lines in the states. These funky lines are just the boundaries where each office has juristiction over, which is helpful when a tornado goes across these boundaries (and when a survey goes from in-depth to like one damage path, happens more than you think!). At the top of the page, we can see some buttons. Starting on the right, we have the buttons for selecting the time period. This allows us to see data from between 2 different dates. Typically, I tend to view, at most, 1 year at a time, since there can be so much data to load that the browser either crashes, or your pc freezes if you select a large set of data. To the left of this, there are several different buttons, for learning about the page, showing radar data of the time, seeing legend and layer lists, adding data, and filters. On the left side of the page are a few tools, including a search box to look up towns, counties or cities, a download tool (we will get to that later), a measurement tool, and a print and gallery tools. All of these tools are pretty self-explainatory.
         </p>
 
         <h2 id="3">How to Download Files</h2>
+        <p>What Would I Even Download Files?</p>
         <p>
+            Its actually quite useful! I used it quite alot for my <a href="g_earth.html">Google Earth project</a>! It lets you download each DI, along with all the paths and polygons. 
+        </p>
 
+        <p>What Exactly do I Download?</p>
+        <p>
+            The DAT site currently allows you to download two types of files, KMZ files (on the site it incorrectly has them as KML files), which is for Google Earth, and ShapeFiles, which is used for GIS applications, which most people dont use, in this case, we will just talk about KMZ files and how to download them.
+        </p>
+
+        <p>Downloading The Files</p>
+        <p>
+            
         </p>
 
         <h2 id="4">Known Problems</h2>
         <p>
-            <img loading="lazy" src="../../../Images/DAT/4.png" style="float: left;width: 300px;height: 200px;">One of the problems I have come across when using the DAT involves the downloading tool. When on a public network, and you try to download something, in this case I'm trying to download the KMZ file for the Moore 2013 EF-5, you get this error.  From What I can tell, through the inspect element and talking with some friends, is that when you click the download, you send a request, and that request sends some information along with it (most sites like this do that, quite common). What it basically "asks" for is the DI's and polygons, and it also tells the server about where the request came from (since it needs it to send the DI's and polygons back somewhere), with an address. From what I believe, when the DAT server sees an adress coming from a public place, it either gets caught on a bug, or it see's it comes from a public place, and then refuses to send the data (public connections are a weak point when it comes to secuirity). Knowing the way government sites are, its probably the former, but the later is also possible.
+            <img loading="lazy" src="../../../Images/DAT/4.png" style="float: left;width: 600px;height: 337.50px;">One of the problems I have come across when using the DAT involves the downloading tool. When on a public network, and you try to download something, in this case I'm trying to download the KMZ file for the Moore 2013 EF-5, you get this error.  From What I can tell, through the inspect element and talking with some friends, is that when you click the download, you send a request, and that request sends some information along with it (most sites like this do that, quite common). What it basically "asks" for is the DI's and polygons, and it also tells the server about where the request came from (since it needs it to send the DI's and polygons back somewhere), with an address. From what I believe, when the DAT server sees an adress coming from a public place, it either gets caught on a bug, or it see's it comes from a public place, and then refuses to send the data (public connections are a weak point when it comes to secuirity). Knowing the way government sites are, its probably the former, but the later is also possible.
+        </p>
+        <p>So How do You Fix it?</p>
+        <p>
+            One of the ways I found a way to avoid this problem is using a vpn when using public wifi connections. any vpn (that actually works) should work. I have been using <a href="https://protonvpn.com/download#hero" target="_blank">Proton VPN</a>, which is a free vpn (just be aware, some free vpn's can be sketchy, or sell your data, from what i can tell, Proton is decent), which is free and open source and I havent had an issue yet with them. It does have some limitations with its free plan, but you'd find that anywhere. Using this method, using a server thats in the states works well, as sometimes the DAT just doesnt like people trying to download KMZ files from outside of the United States (sucks as a Canadian). As of now, I have yet to figure out any other fixes for this problem.
         </p>
         
     </div>
