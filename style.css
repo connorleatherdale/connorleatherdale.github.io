@@ -177,6 +177,7 @@ ul.topnav li a:hover {
 
 .recommended div {
   text-align: center;
+  height: fit-content;
 }
 
 
