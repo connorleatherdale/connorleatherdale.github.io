@@ -189,7 +189,6 @@ ul.topnav li a:hover {
 
 .tooltiptext {
   visibility: hidden; 
-  width: 130px;
   background-color: black;
   color: #ffffff;
   text-align: center;
@@ -197,6 +196,11 @@ ul.topnav li a:hover {
   border-radius: 6px;
   position: absolute;
   z-index: 1; 
+
+  width: 130px;
+  bottom: 100%;
+  left: 65%;
+  margin-left: -65px; 
 }
 
 
