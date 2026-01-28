@@ -180,3 +180,27 @@ ul.topnav li a:hover {
 }
 
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; 
+  cursor: pointer;
+}
+
+.tooltiptext {
+  visibility: hidden; 
+  width: 130px;
+  background-color: black;
+  color: #ffffff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1; 
+}
+
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
