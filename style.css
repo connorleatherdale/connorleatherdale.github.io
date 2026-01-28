@@ -175,3 +175,8 @@ ul.topnav li a:hover {
   text-align: center;
 }
 
+.recommended div > img {
+  width: 100px;
+  height: 100px;
+}
+
