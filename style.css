@@ -198,7 +198,7 @@ ul.topnav li a:hover {
   z-index: 1; 
 
   width: 130px;
-  bottom: 100%;
+  top: 100%;
   left: 65%;
   margin-left: -65px; 
 }
