@@ -18,8 +18,6 @@ body {
   width: 100%;
   height: 100px;;
   text-align: center;
-  align-content: center ;
-  align-self: center;
   
   background-color: gray;
   
@@ -40,8 +38,7 @@ ul.topnav {
   margin: 0;
   padding: 0;
   background-color: #333333;
-  align-self: center;
-  align-content: center;
+  justify-content: center;
   
   
 }
