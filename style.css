@@ -19,6 +19,7 @@ body {
   height: 100px;;
   text-align: center;
   align-content: center ;
+  align-self: center;
   
   background-color: gray;
   
