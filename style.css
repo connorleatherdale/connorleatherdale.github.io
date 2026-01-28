@@ -165,7 +165,7 @@ ul.topnav li a:hover {
   grid-auto-rows: 5;
   grid-auto-columns: 5;
   grid-template-columns: repeat(5, 1fr);
-  width: 90%;
+  max-width: 90%;
   
   
   
