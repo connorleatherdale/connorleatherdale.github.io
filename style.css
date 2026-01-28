@@ -164,11 +164,12 @@ ul.topnav li a:hover {
   display: grid;
   grid-template-columns: 1fr, 1fr, 1fr, 1fr;
   grid-template-rows: 1fr, 1fr, 1fr;
+  width: 90%;
   
   
 }
 
 .recommended div {
-  width: 10%;
+  
 }
 
