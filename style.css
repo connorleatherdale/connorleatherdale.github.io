@@ -209,17 +209,3 @@ ul.topnav li a:hover {
   visibility: visible;
 }
 
-.list {
-  display: flex;
-}
-
-.list li {
-  display: flex;
-  justify-content: center;
-  text-align: justify;
-}
-
-.list li > img {
-  display: flex;
-  justify-content: left;
-}
