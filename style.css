@@ -210,6 +210,16 @@ ul.topnav li a:hover {
 }
 
 .list {
-  display: inline-block;
-  text-align: right;
+  display: flex;
+}
+
+.list li {
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+}
+
+.list li > img {
+  display: flex;
+  justify-content: left;
 }
