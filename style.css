@@ -209,3 +209,6 @@ ul.topnav li a:hover {
   visibility: visible;
 }
 
+.list {
+  display: inline-block;
+}
