@@ -213,10 +213,3 @@ ul.topnav li a:hover {
   list-style-type: circle;
 }
 
-.list p {
-  float: right;
-}
-
-.list img {
-  float: left;
-}
