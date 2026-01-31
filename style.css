@@ -209,7 +209,10 @@ ul.topnav li a:hover {
   visibility: visible;
 }
 
-.list {
-  list-style-type: circle;
+.list img {
+  float: left;
 }
 
+.list text {
+  float: right;
+}
