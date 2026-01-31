@@ -219,5 +219,5 @@ ul.topnav li a:hover {
 }
 
 .list img {
-  list-style-position: inside;
+  float: left;
 }
