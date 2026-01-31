@@ -211,4 +211,9 @@ ul.topnav li a:hover {
 
 .list {
   text-align: start;
+  list-style-type: circle;
+  
+}
+.list img {
+  list-style-position: outside;
 }
