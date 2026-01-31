@@ -218,5 +218,5 @@ ul.topnav li a:hover {
 }
 
 .list img {
-  list-style-position: outside;
+  list-style-position: inside;
 }
