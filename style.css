@@ -210,10 +210,13 @@ ul.topnav li a:hover {
 }
 
 .list {
-  text-align: start;
   list-style-type: circle;
-  
 }
+
+.list li {
+  vertical-align: top;
+}
+
 .list img {
   list-style-position: outside;
 }
