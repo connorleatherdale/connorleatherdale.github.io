@@ -230,6 +230,10 @@ ul.topnav li a:hover {
   
 }
 
-.List div {
-  text-align: right ;
+.List div > img{
+  float: left;
+}
+
+.List div > p {
+  float: right;
 }
