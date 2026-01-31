@@ -216,3 +216,20 @@ ul.topnav li a:hover {
 .list text {
   float: right;
 }
+
+.List {
+  display: grid;
+  grid-auto-rows: 1;
+  grid-auto-columns: 5;
+  grid-template-columns: repeat(5, 1fr);
+  width: 90%;
+  height: min-content;
+  row-gap: 25px;
+  column-gap: 25px;
+  padding-left: 10px;
+  
+}
+
+.List div {
+  text-align: right ;
+}
