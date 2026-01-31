@@ -215,6 +215,7 @@ ul.topnav li a:hover {
 
 .list li {
   vertical-align: top;
+  text-align: center;
 }
 
 .list img {
