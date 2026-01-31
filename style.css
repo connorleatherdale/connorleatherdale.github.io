@@ -217,23 +217,4 @@ ul.topnav li a:hover {
   float: right;
 }
 
-.List {
-  display: grid;
-  grid-auto-rows: 100;
-  grid-auto-columns: 1;
-  
-  width: 90%;
-  height: min-content;
-  row-gap: 25px;
-  column-gap: 25px;
-  padding-left: 10px;
-  
-}
 
-.List div > img{
-  float: left;
-}
-
-.List div > p {
-  float: right;
-}
