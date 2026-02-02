@@ -217,4 +217,6 @@ ul.topnav li a:hover {
   float: right;
 }
 
-
+figcaption {
+  text-align: center;
+}
