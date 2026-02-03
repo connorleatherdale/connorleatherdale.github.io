@@ -256,7 +256,7 @@ ul.topnav li a:hover {
 }
 
 figure {
-  max-width: 300px;
+  max-width: fit-content;
   overflow: auto;
 }
 
@@ -265,3 +265,6 @@ figure img {
   margin: 0 1em 1em 0;
 }
 
+figcaption {
+  text-align: center;
+}
