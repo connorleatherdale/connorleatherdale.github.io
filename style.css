@@ -255,15 +255,3 @@ ul.topnav li a:hover {
   float: right;
 }
 
-figure {
-  
-  overflow: hidden;
-}
-
-figure img {
-  float: left;
-}
-
-figcaption {
-  text-align: center;
-}
