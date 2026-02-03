@@ -257,7 +257,7 @@ ul.topnav li a:hover {
 
 figure {
   
-  overflow: auto;
+  overflow: hidden;
 }
 
 figure img {
