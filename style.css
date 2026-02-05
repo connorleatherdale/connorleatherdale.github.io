@@ -33,6 +33,7 @@ body {
     1px -1px 0 #f1f1f1,
     -1px 1px 0 #f1f1f1,
     1px 1px 0 #f1f1f1;
+  height: 80%;
 }
 
 ul.topnav {
