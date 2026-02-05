@@ -202,8 +202,8 @@ ul.topnav li a:hover {
 .recommended {
   display: grid;
   grid-auto-rows: 5;
-  grid-auto-columns: 5;
-  grid-template-columns: repeat(5, 1fr);
+  grid-auto-columns: 4;
+  grid-template-columns: repeat(4, 1fr);
   width: 90%;
   height: min-content;
   row-gap: 25px;
