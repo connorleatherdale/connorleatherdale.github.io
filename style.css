@@ -216,14 +216,7 @@ ul.topnav li a:hover {
 
 .recommended div {
   text-align: center;
-  transition: transform 0.3s ease-in-out;
 }
-
-
-.recommended:hover div {
-  transform: scale(1.1); /* Increases size by 10% */
-}
-
 
 .tooltip {
   position: relative;
