@@ -11,3 +11,5 @@ To Do
 
 Index
 - i want to revamp in homepage/index page, make it look more interesting perchance
+- probably fix the site so it works for mobile
+- maybe actually learn javascript so i can do more interesting things
