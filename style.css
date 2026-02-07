@@ -54,7 +54,7 @@ ul.topnav li a {
   padding: 14px 16px;
   text-decoration: none;
   border-radius: 5px;
-  transition: 0.3s;
+  transition-duration: 0.3s;
 }
 
 /* Change color on hover */
