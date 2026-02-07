@@ -51,10 +51,11 @@ ul.topnav {
 ul.topnav li a {
   display: block;
   color: #f1f1f1;
+  background-color: none;
   padding: 14px 16px;
   text-decoration: none;
   border-radius: 5px;
-  transition-duration: 0.3s;
+  transition: background 4s ;
 }
 
 /* Change color on hover */
