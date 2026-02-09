@@ -13,3 +13,13 @@ Index
 - i want to revamp in homepage/index page, make it look more interesting perchance
 - probably fix the site so it works for mobile
 - maybe actually learn javascript so i can do more interesting things
+
+About
+- actually make it more interesting probably
+
+Blog page
+- change it so you have the list on one side, and then the content on the other so you can scroll through independantly.
+
+blog posts
+- outlines in the Ideas.txt file
+
