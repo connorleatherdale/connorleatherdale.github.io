@@ -263,3 +263,24 @@ ul.topnav li a:hover {
   float: right;
 }
 
+.gallery {
+  display: grid;
+  grid-auto-rows: 5;
+  grid-auto-columns: 4;
+  grid-template-columns: repeat(4, 1fr);
+  width: 90%;
+  height: min-content;
+  row-gap: 25px;
+  column-gap: 25px;
+  padding-left: 10px;
+  
+  
+  
+}
+
+.gallery div {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; 
+  cursor: pointer;
+}
