@@ -296,14 +296,14 @@ ul.topnav li a:hover {
 
 .sidebar {
   flex: 20%;
-  background-color: #f1f1f1;
+  background-color: #a2a2a2;
   padding: 20px;
   border-style: solid;
 }
 
 
 /*
-  backgrounds will be handled in the HTML file itself
+  backgrounds for .content{} will be handled in the HTML file itself
 */
 .content {
   flex: 80%;
