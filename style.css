@@ -85,6 +85,7 @@ ul.topnav li a:hover {
   
 }
 
+
 .Body h2 {
   padding-left: 10px;
   font-size: xx-large;
@@ -273,13 +274,154 @@ ul.topnav li a:hover {
   row-gap: 25px;
   column-gap: 25px;
   padding-left: 10px;
-  
-  
-  
 }
 
 .gallery div {
   position: relative;
   display: inline-block;
   border-bottom: 1px dotted black; 
+}
+
+
+/* 
+    anything after this is for the sidebar/content thing, so its split up
+*/
+
+.twocolumn {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 130px ;
+
+}
+
+.sidebar {
+  flex: 20%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-style: solid;
+}
+
+
+/*
+  backgrounds will be handled in the HTML file itself
+*/
+.content {
+  flex: 80%;
+  padding: 20px;
+}
+
+.twocolumn h2 {
+  padding-left: 10px;
+  font-size: xx-large;
+  /*padding-top: 10px;*/
+  color: #dddddd;
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.twocolumn h3 {
+  padding-left: 10px;
+  font-size: large;
+  /*padding-top: 10px;*/
+  color: #dddddd;
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.twocolumn h4 {
+  padding-left: 10px;
+  font-size: large;
+  /*padding-top: 10px;*/
+  color: #dddddd;
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.twocolumn h5 {
+  padding-left: 10px;
+  font-size: large;
+  /*padding-top: 10px;*/
+  color: #dddddd;
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+
+
+.twocolumn h6 {
+  padding-left: 10px;
+  /*padding-top: 10px;*/
+  color: #dddddd;
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.twocolumn p {
+  padding-left: 10px;
+  font-size: large;
+  /*padding-top: 10px;*/
+  margin-left: 10px;
+  color: #dddddd;
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  text-indent: 30px;
+}
+
+.twocolumn img {
+  margin-right: 10px;
+}
+
+.twocolumn a:link {
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  color: #dddddd;
+}
+
+.twocolumn a:visited {
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  color: #dddddd;
+}
+
+.twocolumn a:hover {
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  color: aqua;
+}
+
+.twocolumn ul {
+  
+  color: #dddddd;
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
