@@ -5,6 +5,12 @@ What are radars?
     - talk about what a radar is, what those weird white balls you sometimes see along the road
     - talk about the different kinds of radars, and what each country uses
 
+radar sites around the world
+    - sort by country
+    - talk about what each countries use for their weather radars
+    - possibly talk about some of my favourite/most interesting radar sites 
+
+
 What is the EF-scale?
     - pretty self-explanatory
     - talk about each level, done
@@ -18,8 +24,6 @@ Tornado - specific
 
 
 
-
-
 Meteorology in canada
     - talk about what is similiar and different between canadian and american met services
     - talk about whats unique
@@ -28,6 +32,11 @@ Meteorology in canada
 Tornado Types (stovepipe, rope, wedge, etc)
     - Talk about the different labels and such
     - mention that the shape does not correlate with strength
+    - QLCS tornadoes
+
+
+Create the EF-intensity tool in my site
+    - will need to figure out how to do javascript
 
 Barrow Island
     - the barrow island vortex thing
