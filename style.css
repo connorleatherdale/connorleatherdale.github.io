@@ -296,9 +296,11 @@ ul.topnav li a:hover {
 
 .sidebar {
   flex: 20%;
+  height: fit-content;
   background-color: #a2a2a2;
   padding: 20px;
   border-style: solid;
+  background-attachment: fixed;
 }
 
 
