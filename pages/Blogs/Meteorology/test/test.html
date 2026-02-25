@@ -1,3 +1,12 @@
+<!--
+    This is just a test file so i can mess around with JavaScript and learn it
+
+    Eventually will use it to create a tornado intensity calculator.
+
+-->
+
+
+
 <!DOCTYPE html>
 <html lang="english">
     <head>
@@ -36,17 +45,20 @@
         <script src="test.js"></script>
 
         <h2>Input the following</h2>
-        <form action="test.js">
+        <form method="get" action="test.js" id="form">
             <label for="fname">First value</label>
-            <input type="number" id="FirstValue" value="0"><br><br>
-            <input type="submit" value="Submit">
+            <input type="number" id="value1" value="0"><br><br>
+            <label for="fname">Second value</label>
+            <input type="number" id="value2" value="0"><br><br>
+            <button type="button" onclick="input()">save</button>
+            <button type="button" onclick="printForm()">Print</button>
 
 
         </form>
 
         <p id="demo"></p>
 
-        <!--
+        <!-- was just messing around with this
         <script>
             function math() {
                 let a = 1;
