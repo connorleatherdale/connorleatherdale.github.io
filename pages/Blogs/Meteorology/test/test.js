@@ -1,4 +1,4 @@
-const form = document.getElementById("FirstValue");
+//const form = document.getElementById("FirstValue");
 
 let a = 1
 
