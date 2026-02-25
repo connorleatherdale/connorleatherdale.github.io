@@ -27,10 +27,10 @@ function input(){
     let text;
     // valueAsNumber is needed, if you try to use .value, when trying to add, treats them as strings, instead of integers, so the math then gets funky
     x = document.getElementById('value1').valueAsNumber;
-    if (x<0){
-        text = "Input not valid";
-        document.getElementById("value1error").innerHTML = text;
-    }
+    //if (x<0){
+        //text = "Input not valid";
+        //document.getElementById("value1error").innerHTML = text;
+    //}
     y = document.getElementById('value2').valueAsNumber;
     console.log("form has been saved and printed");
 
