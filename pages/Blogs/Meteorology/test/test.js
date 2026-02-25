@@ -1,5 +1,10 @@
-//const form = document.getElementById("FirstValue");
+//messing around with functions and tying this to html, will have to use javascript to create a tornado intensity calculator, and maybe other things
+// will see about adding other tools aswell, might add echo's tornado intensity calculator.
 
+// I am slightly worried about memory usage, I am still new to JS, we will see
+
+
+//messing around with something basic, everytime you press this button, the value adds one
 let a = 1
 
 function math() {
@@ -12,25 +17,36 @@ function print(){
     console.log(a-1);
 }
 
-// Form functions and whatnot
+// functions to operate the form
 
 let x = 0;
 let y = 0;
 let z = 0;
 
 function input(){
+    let text;
     // valueAsNumber is needed, if you try to use .value, when trying to add, treats them as strings, instead of integers, so the math then gets funky
-    x = document.getElementById('value1').valueAsNumber 
-    y = document.getElementById('value2').valueAsNumber
-}
+    x = document.getElementById('value1').valueAsNumber;
+    if (x<0){
+        text = "Input not valid";
+        document.getElementById("value1error").innerHTML = text;
+    }
+    y = document.getElementById('value2').valueAsNumber;
+    console.log("form has been saved and printed");
 
-//changes the <p> to the output of z
-function printForm() {
-    let z = x + y;
+    z = x + y;
     document.getElementById("demo").innerHTML = z;
+    console.log(z);
 }
 
-function form(x) {
-    document.getElementById("demo").innerHTML = x;
+
+
+function resetForm() {
+    document.getElementById("form").reset();
+    z = 0;
+    document.getElementById("demo").innerHTML = 0;
+    console.log("form has been reset");
 }
+
+
 

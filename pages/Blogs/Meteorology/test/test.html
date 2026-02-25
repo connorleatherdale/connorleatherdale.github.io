@@ -47,32 +47,19 @@
         <h2>Input the following</h2>
         <form method="get" action="test.js" id="form">
             <label for="fname">First value</label>
-            <input type="number" id="value1" value="0"><br><br>
+            <input type="number" id="value1" value="0"><br>
+            <label for="fname" id="value1_error"></label>
             <label for="fname">Second value</label>
             <input type="number" id="value2" value="0"><br><br>
             <button type="button" onclick="input()">save</button>
-            <button type="button" onclick="printForm()">Print</button>
+            
+            <button type="button" onclick="resetForm()">reset</button>
 
 
         </form>
 
         <p id="demo"></p>
-
-        <!-- was just messing around with this
-        <script>
-            function math() {
-                let a = 1;
-                let b = 2;
-                return a+b;
-                
-            }
-            function print(){
-                document.getElementById("demo").innerHTML = math();
-            }
-            
-        </script>
-    -->
-
+        
         <button type="button" onclick="print()">Try it</button>
 
     </div>
