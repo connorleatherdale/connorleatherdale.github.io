@@ -24,7 +24,7 @@ let y = 0;
 let z = 0;
 
 function input(){
-    let text;
+    //let text;
     // valueAsNumber is needed, if you try to use .value, when trying to add, treats them as strings, instead of integers, so the math then gets funky
     x = document.getElementById('value1').valueAsNumber;
     //if (x<0){
@@ -43,8 +43,8 @@ function input(){
 
 function resetForm() {
     document.getElementById("form").reset();
-    z = 0;
-    document.getElementById("demo").innerHTML = 0;
+    //z = 0;
+    //document.getElementById("demo").innerHTML = 0;
     console.log("form has been reset");
 }
 
