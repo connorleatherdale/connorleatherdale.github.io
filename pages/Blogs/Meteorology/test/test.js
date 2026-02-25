@@ -9,4 +9,5 @@ function math() {
 }
 function print(){
     document.getElementById("demo").innerHTML = math();
+    console.log(a-1);
 }
