@@ -4,6 +4,18 @@
 // I am slightly worried about memory usage, I am still new to JS, we will see
 
 
+// sleep function i found
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
+
+
+
 //messing around with something basic, everytime you press this button, the value adds one
 let a = 1
 
