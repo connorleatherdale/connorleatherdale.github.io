@@ -7,16 +7,25 @@ function updateTime(){
     var day = currentTime.getDay()
     var hours = currentTime.getHours()
     var minutes = currentTime.getMinutes()
+    var seconds = currentTime.getSeconds()
     
+
+
     if (minutes < 10){
         minutes = "0" + minutes
     }
-    var t_str = hours + ":" + minutes + " ";
+    if (seconds < 10){
+        seconds = "0" + seconds
+    }
+    var t_str = hours + ":" + minutes + ":";
+
+    t_str += seconds;
     if(hours > 11){ //is it morning or afernoon
         t_str += "PM";
     } else {
         t_str += "AM";
     }
+    
 
     // setup which month it is
     t_str += ", ";
@@ -51,4 +60,4 @@ function updateTime(){
 
     document.getElementById('time_span').innerHTML = t_str;
 }
-setInterval(updateTime, 1000);
+setInterval(updateTime, 100);

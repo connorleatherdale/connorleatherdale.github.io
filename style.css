@@ -41,7 +41,9 @@ body {
     1px -1px 0 #f1f1f1,
     -1px 1px 0 #f1f1f1,
     1px 1px 0 #f1f1f1;
-    text-align: center;
+  text-align: center;
+  position: relative;
+  top: -20%;
 }
 
 ul.topnav {
@@ -51,7 +53,7 @@ ul.topnav {
   padding: 0;
   background-color: #333333;
   position: relative;
-  top: auto;
+  top: -15%;
   
   
   
