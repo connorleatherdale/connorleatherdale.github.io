@@ -65,6 +65,9 @@ function resetForm() {
 let w = new Worker("worker.js");
 
 function startWorker() {
+  if (typeof(w) == "undefined") {
+    w = new Worker("worker.js");
+  }
   w.onmessage = function(event) {
     document.getElementById("result").innerHTML = event.data;
   };
