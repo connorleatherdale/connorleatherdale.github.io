@@ -61,4 +61,16 @@ function resetForm() {
 }
 
 
+// testing out API calls and such, and whatnot idk
+let w = new Worker("worker.js");
 
+function startWorker() {
+  w.onmessage = function(event) {
+    document.getElementById("result").innerHTML = event.data;
+  };
+}
+
+function stopWorker() {
+  w.terminate();
+  w = undefined;
+}
