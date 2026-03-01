@@ -34,6 +34,7 @@ function print(){
 let x = 0;
 let y = 0;
 let z = 0;
+let storedValue = localStorage.getItem("value");
 
 function input(){
     //let text;
@@ -50,6 +51,7 @@ function input(){
     document.getElementById("demo").innerHTML = z;
     console.log(z);
 }
+
 
 
 
