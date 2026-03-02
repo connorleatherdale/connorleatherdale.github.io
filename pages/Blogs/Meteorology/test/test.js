@@ -91,6 +91,7 @@ function startWorker() {
   }
   w.onmessage = function(event) {
     document.getElementById("result").innerHTML = event.data;
+    console.log(event.data);
   };
 }
 
