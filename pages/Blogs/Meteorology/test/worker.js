@@ -6,6 +6,7 @@ let i = 0;
 function timedCount() {
   i ++;
   postMessage(i);
+  console.log(i);
   setTimeout("timedCount()",500);
 }
 
