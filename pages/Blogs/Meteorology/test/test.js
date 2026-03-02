@@ -4,6 +4,7 @@
 // I am slightly worried about memory usage, I am still new to JS, we will see
 
 
+
 // sleep function i found
 function sleep(milliseconds) {
   var start = new Date().getTime();
@@ -15,7 +16,6 @@ function sleep(milliseconds) {
 }
 
 
-
 //messing around with something basic, everytime you press this button, the value adds one
 let a = 1
 
@@ -25,8 +25,10 @@ function math() {
                 
 }
 
+
+
 // function to print to the <p id = demo> guy
-function print(){
+function print() {
     document.getElementById("demo").innerHTML = math();
     console.log(a-1);
 }
@@ -36,7 +38,8 @@ function print(){
 let x = 0;
 let y = 0;
 let z = 0;
-let storedValue = localStorage.getItem("value");
+
+
 
 function input(){
     //let text;
@@ -62,6 +65,19 @@ function resetForm() {
     //z = 0;
     //document.getElementById("demo").innerHTML = 0;
     console.log("form has been reset");
+}
+
+// decided to mess around with storing variables in the browser's built in storage, using the local.storage api thing.
+
+// saving the form to localStorage in the browser
+function saveValue(){
+  localStorage.setItem("value1",z); // set the value as the variable Z from ealier, can be anything though, just have it as this as a placeholder.
+}
+
+// then loading the value and printing it to the console
+function loadValue() {
+  document.getElementById("demo").innerHTML = localStorage.getItem("value1");
+  console.log(localStorage.getItem("value1"));
 }
 
 
