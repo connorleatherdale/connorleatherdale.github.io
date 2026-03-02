@@ -24,6 +24,8 @@ function math() {
     return b;
                 
 }
+
+// function to print to the <p id = demo> guy
 function print(){
     document.getElementById("demo").innerHTML = math();
     console.log(a-1);
@@ -39,13 +41,13 @@ let storedValue = localStorage.getItem("value");
 function input(){
     //let text;
     // valueAsNumber is needed, if you try to use .value, when trying to add, treats them as strings, instead of integers, so the math then gets funky
-    x = document.getElementById('value1').valueAsNumber;
+    x = document.getElementById('value1').valueAsNumber; // set the x variable to the input on the form
     //if (x<0){
         //text = "Input not valid";
         //document.getElementById("value1error").innerHTML = text;
     //}
-    y = document.getElementById('value2').valueAsNumber;
-    console.log("form has been saved and printed");
+    y = document.getElementById('value2').valueAsNumber; // set the y variable to the input of the form
+    console.log("form has been saved and printed"); // just to see if the function has saved
 
     z = x + y;
     document.getElementById("demo").innerHTML = z;
@@ -54,7 +56,7 @@ function input(){
 
 
 
-
+// resets the form back to the starting "base level" 
 function resetForm() {
     document.getElementById("form").reset();
     //z = 0;
@@ -66,6 +68,7 @@ function resetForm() {
 // testing out API calls and such, and whatnot idk
 let w = new Worker("worker.js");
 
+// call the worker and if the worker is undefined, change it, then wait for the message
 function startWorker() {
   if (typeof(w) == "undefined") {
     w = new Worker("worker.js");
@@ -75,6 +78,8 @@ function startWorker() {
   };
 }
 
+
+// stop the worker, and make it undefined again, so we can re use it.
 function stopWorker() {
   w.terminate();
   w = undefined;

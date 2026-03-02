@@ -9,7 +9,7 @@ function updateTime(){
     var minutes = currentTime.getMinutes()
     var seconds = currentTime.getSeconds()
     
-    
+    day = day + 1;
 
     if (minutes < 10){
         minutes = "0" + minutes
