@@ -7,7 +7,7 @@
 
 @keyframes animate {
   from {opacity: 1; z-index: 2;}
-  to {opacity: 0; z-index: -50000000;}
+  to {opacity: 0; z-index: 0;}
 }
 
 #load {
