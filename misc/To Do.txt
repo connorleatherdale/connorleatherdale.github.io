@@ -3,9 +3,18 @@ all what this text file is, is just for ideas on what to add for blogs/pages, or
 
 
 To-do (javascript)
-    - Create a thing for the header at the top, that shows the users time.
+    - Create a thing for the header at the top, that shows the users time. (done)
     - create a page for tornado intensity
     - probably make some other meteorology-related tools 
+    - work on dealing with animations
+        - index page   
+            - the little fade out animation at the start, i want to make it so that during a session, it only does it the first time you open the index page (thinking of storing a variable, or boolean value in sessionStorage or something)
+    
+    
+    - create a settings page
+        - dark mode/light mode
+        - clearing stored values/cookies
+
 
 
 
@@ -20,7 +29,7 @@ radar sites around the world
     - possibly talk about some of my favourite/most interesting radar sites 
 
 
-What is the EF-scale?
+What is the EF-scale? (done)
     - pretty self-explanatory
     - talk about each level, done
     - maybe compare it to other scales
@@ -49,6 +58,7 @@ Tornado Types (stovepipe, rope, wedge, etc)
 
 Create the EF-intensity tool in my site
     - will need to figure out how to do javascript
+    - might use echo's calculator
 
 Barrow Island
     - the barrow island vortex thing

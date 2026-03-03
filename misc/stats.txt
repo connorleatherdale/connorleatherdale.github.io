@@ -1,0 +1,4 @@
+this is just a stats file for keeping track of how much code i have written for this project
+
+2026
+ 2500 lines of code.

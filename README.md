@@ -1,6 +1,10 @@
 # To access the website, follow this link
     https://connorleatherdale-github-io.pages.dev/
 
+
+## usage and sharing
+if you want to make suggestions, or fix something, feel free to do pull requests, i look at it frequently anyways.
+
 ## How do I host it?
 So currently, the way I am hosting my site is kinda funky, right now, im using my github repository as a "test" build, where I can commit the latest version, and test out some more newest features, although I have been doing this locally between my laptop and my pc. So lately, ive been using this repository more as something to check performance, and to catch anything that might work locally, but has hiccups when hosted on Github.
 
