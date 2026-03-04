@@ -54,7 +54,7 @@ function input(){
 
     
     check1 = document.getElementById("check1").checked; // set the variable check1 to either true or false, based on the form
-    formValues[3] = document.getElementById("check1").checked
+    formValues[3] = document.getElementById("check1").checked;
     console.log(check1);
     console.log("form has been saved and printed"); // just to see if the function has saved
 
