@@ -35,26 +35,33 @@ function print() {
 
 // functions to operate the form
 
+const formValues = []; // gonna see if i can store everything in just one array
+
 let x = 0;
 let y = 0;
 let z = 0;
+let check1;
 
 
 
 function input(){
-    //let text;
     // valueAsNumber is needed, if you try to use .value, when trying to add, treats them as strings, instead of integers, so the math then gets funky
     x = document.getElementById('value1').valueAsNumber; // set the x variable to the input on the form
-    //if (x<0){
-        //text = "Input not valid";
-        //document.getElementById("value1error").innerHTML = text;
-    //}
+    formValues[0] = document.getElementById('value1').valueAsNumber;
+    
     y = document.getElementById('value2').valueAsNumber; // set the y variable to the input of the form
+    formValues[1] = document.getElementById('value2').valueAsNumber;
+
+    
+    check1 = document.getElementById("check1").checked; // set the variable check1 to either true or false, based on the form
+    formValues[3] = document.getElementById("check1").checked
+    console.log(check1);
     console.log("form has been saved and printed"); // just to see if the function has saved
 
     z = x + y;
+    formValues[2] = z;
     document.getElementById("demo").innerHTML = z;
-    console.log(z);
+    console.log(formValues);
 }
 
 
@@ -62,8 +69,7 @@ function input(){
 // resets the form back to the starting "base level" 
 function resetForm() {
     document.getElementById("form").reset();
-    //z = 0;
-    //document.getElementById("demo").innerHTML = 0;
+    
     console.log("form has been reset");
 }
 
@@ -72,12 +78,14 @@ function resetForm() {
 // saving the form to localStorage in the browser
 function saveValue(){
   localStorage.setItem("value1",z); // set the value as the variable Z from ealier, can be anything though, just have it as this as a placeholder.
+  localStorage.setItem("array", formValues);
 }
 
 // then loading the value and printing it to the console
 function loadValue() {
   document.getElementById("demo").innerHTML = localStorage.getItem("value1");
   console.log(localStorage.getItem("value1"));
+  console.log(localStorage.getItem("array"));
 }
 
 
