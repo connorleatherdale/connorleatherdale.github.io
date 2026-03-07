@@ -15,6 +15,12 @@ To-do (javascript)
         - dark mode/light mode
         - clearing stored values/cookies
 
+    - create a projects/ portfolio page, with pages to random things ive tried to do.
+        - make a calculator
+        - to do list things that automatically adds and deletes things
+        - weather app using weather api's
+        - maybe a random quote generator (also using api's)
+
 
 
 
