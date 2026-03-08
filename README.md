@@ -28,5 +28,3 @@ To start off, I do plan on hosting only some of the photos in the Images folder,
 If you're curious on some of my plans, if you go to misc -> Ideas.txt, you can find some of the things I plan on adding, and what kind of pages I might add.
 
 started this since i found out you could host websites on github pages, and i was wanting to host a personal website and all, so i started to work on this. Mostly just a place for me to talk my heart out about stuff I love, thats all. 
-
-

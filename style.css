@@ -113,6 +113,10 @@ ul.topnav li a:hover {
 
 }
 
+/*
+  for basically anything other than the header
+*/
+
 .Body {
   display: flex;
   flex-direction: column;
@@ -332,17 +336,20 @@ ul.topnav li a:hover {
 .twocolumn {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 130px ;
+  margin-top: 140px;
+  margin-left: -10px;
 
 }
 
 .sidebar {
-  flex: 20%;
+  flex: 15%;
   height: fit-content;
   background-color: #a2a2a2;
-  padding: 20px;
+  
   border-style: solid;
   background-attachment: fixed;
+  height: auto;
+  
 }
 
 
@@ -353,9 +360,20 @@ ul.topnav li a:hover {
   flex: 80%;
   padding: 20px;
   align-items: center;
+  background-color: rgba(185, 185, 185, 0.1) ;
+  background-size: auto;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  
+
 }
 
-.twocolumn h2 {
+/*
+  setting up for .sidebar
+*/
+
+.sidebar h2 {
   padding-left: 10px;
   font-size: xx-large;
   /*padding-top: 10px;*/
@@ -367,7 +385,76 @@ ul.topnav li a:hover {
     1px 1px 0 #000;
 }
 
-.twocolumn h3 {
+.sidebar p {
+  padding-left: 10px;
+  font-size: large;
+  /*padding-top: 10px;*/
+  
+  color: #dddddd;
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  
+}
+
+.sidebar a:link {
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  color: #dddddd;
+}
+
+.sidebar a:visited {
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  color: #dddddd;
+}
+
+.sidebar a:hover {
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  color: aqua;
+}
+
+.sidebar ul {
+  
+  color: #dddddd;
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+
+
+
+/*
+  setting up for .content
+*/
+.content h2 {
+  padding-left: 10px;
+  font-size: xx-large;
+  /*padding-top: 10px;*/
+  color: #dddddd;
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.content h3 {
   padding-left: 10px;
   font-size: large;
   /*padding-top: 10px;*/
@@ -379,7 +466,7 @@ ul.topnav li a:hover {
     1px 1px 0 #000;
 }
 
-.twocolumn h4 {
+.content h4 {
   padding-left: 10px;
   font-size: large;
   /*padding-top: 10px;*/
@@ -391,7 +478,7 @@ ul.topnav li a:hover {
     1px 1px 0 #000;
 }
 
-.twocolumn h5 {
+.content h5 {
   padding-left: 10px;
   font-size: large;
   /*padding-top: 10px;*/
@@ -405,7 +492,7 @@ ul.topnav li a:hover {
 
 
 
-.twocolumn h6 {
+.content h6 {
   padding-left: 10px;
   /*padding-top: 10px;*/
   color: #dddddd;
@@ -416,7 +503,7 @@ ul.topnav li a:hover {
     1px 1px 0 #000;
 }
 
-.twocolumn p {
+.content p {
   padding-left: 10px;
   font-size: large;
   /*padding-top: 10px;*/
@@ -430,7 +517,7 @@ ul.topnav li a:hover {
   text-indent: 30px;
 }
 
-.twocolumn a:link {
+.content a:link {
   text-shadow: 
     -1px -1px 0 #000,
     1px -1px 0 #000,
@@ -439,7 +526,7 @@ ul.topnav li a:hover {
   color: #dddddd;
 }
 
-.twocolumn a:visited {
+.content a:visited {
   text-shadow: 
     -1px -1px 0 #000,
     1px -1px 0 #000,
@@ -448,7 +535,7 @@ ul.topnav li a:hover {
   color: #dddddd;
 }
 
-.twocolumn a:hover {
+.content a:hover {
   text-shadow: 
     -1px -1px 0 #000,
     1px -1px 0 #000,
@@ -457,7 +544,7 @@ ul.topnav li a:hover {
   color: aqua;
 }
 
-.twocolumn ul {
+.content ul {
   
   color: #dddddd;
   text-shadow: 
@@ -467,12 +554,33 @@ ul.topnav li a:hover {
     1px 1px 0 #000;
 }
 
-.twocolumn img {
+
+.content img {
+  border: 1px solid #ddd;
   margin-right: 10px;
+  display: inline-block;
+  vertical-align: top;
+  float: none !important;
 }
 
-.content p > img {
-  border: 1px solid #ddd;
+.content p {
   
+  
+  font-size: large;
+  /*padding-top: 10px;*/
+  
+  color: #dddddd;
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  text-indent: 30px;
+  display: flex;
+  
+  align-items: flex-start;
+  justify-content: space-between;
+
+
   
 }

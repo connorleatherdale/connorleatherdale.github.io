@@ -1,0 +1,68 @@
+Date : 2026-03-08 13:46:57
+Directory : d:\editing stuff\vss\connorleatherdale.github.io
+Total : 26 files,  2248 codes, 105 comments, 409 blanks, all 2762 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| HTML       |         20 |      1,595 |         38 |        235 |      1,868 |
+| PostCSS    |          1 |        445 |         33 |        108 |        586 |
+| JavaScript |          3 |        122 |         34 |         51 |        207 |
+| XML        |          1 |         69 |          0 |          2 |         71 |
+| Markdown   |          1 |         17 |          0 |         13 |         30 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                              | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                 |         26 |      2,248 |        105 |        409 |      2,762 |
+| . (Files)                                                                                                         |          5 |        679 |         45 |        145 |        869 |
+| JS                                                                                                                |          1 |         52 |          3 |          8 |         63 |
+| pages                                                                                                             |         20 |      1,517 |         57 |        256 |      1,830 |
+| pages (Files)                                                                                                     |          4 |        228 |          6 |         38 |        272 |
+| pages\Blogs                                                                                                       |         16 |      1,289 |         51 |        218 |      1,558 |
+| pages\Blogs\Meteorology                                                                                           |         14 |      1,192 |         51 |        201 |      1,444 |
+| pages\Blogs\Meteorology (Files)                                                                                   |          5 |        633 |          7 |         77 |        717 |
+| pages\Blogs\Meteorology\Specific_tors                                                                             |          1 |        146 |          4 |         30 |        180 |
+| pages\Blogs\Meteorology\test                                                                                      |          3 |        129 |         37 |         59 |        225 |
+| pages\Blogs\Meteorology\under-rated_tors                                                                          |          5 |        284 |          3 |         35 |        322 |
+| pages\Blogs\Meteorology\under-rated_tors (Files)                                                                  |          3 |        174 |          3 |         22 |        199 |
+| pages\Blogs\Meteorology\under-rated_tors\2010's                                                                   |          1 |          0 |          0 |          1 |          1 |
+| pages\Blogs\Meteorology\under-rated_tors\2020's                                                                   |          1 |        110 |          0 |         12 |        122 |
+| pages\Blogs\Photography                                                                                           |          2 |         97 |          0 |         17 |        114 |
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                          | language   | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| d:\editing stuff\vss\connorleatherdale.github.io\JS\time.js                                                       | JavaScript |         52 |          3 |          8 |         63 |
+| d:\editing stuff\vss\connorleatherdale.github.io\README.md                                                        | Markdown   |         17 |          0 |         13 |         30 |
+| d:\editing stuff\vss\connorleatherdale.github.io\format.html                                                      | HTML       |         38 |          1 |          5 |         44 |
+| d:\editing stuff\vss\connorleatherdale.github.io\index.html                                                       | HTML       |        110 |         11 |         17 |        138 |
+| d:\editing stuff\vss\connorleatherdale.github.io\pages\About.html                                                 | HTML       |         48 |          0 |          8 |         56 |
+| d:\editing stuff\vss\connorleatherdale.github.io\pages\Blogs.html                                                 | HTML       |         60 |          1 |         10 |         71 |
+| d:\editing stuff\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\DAT.html                                 | HTML       |         83 |          1 |         11 |         95 |
+| d:\editing stuff\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\EF_scale.html                            | HTML       |        264 |          6 |         42 |        312 |
+| d:\editing stuff\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\Placeholder.html                         | HTML       |          0 |          0 |          1 |          1 |
+| d:\editing stuff\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\Specific_tors\Elie_Oakville.html         | HTML       |        146 |          4 |         30 |        180 |
+| d:\editing stuff\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\g_earth.html                             | HTML       |         62 |          0 |          9 |         71 |
+| d:\editing stuff\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\helpful_links.html                       | HTML       |        224 |          0 |         14 |        238 |
+| d:\editing stuff\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\test\test.html                           | HTML       |         59 |          6 |         16 |         81 |
+| d:\editing stuff\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\test\test.js                             | JavaScript |         63 |         29 |         40 |        132 |
+| d:\editing stuff\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\test\worker.js                           | JavaScript |          7 |          2 |          3 |         12 |
+| d:\editing stuff\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\under-rated_tors\2010's\placeholder.html | HTML       |          0 |          0 |          1 |          1 |
+| d:\editing stuff\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\under-rated_tors\2020's\mayfield.html    | HTML       |        110 |          0 |         12 |        122 |
+| d:\editing stuff\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\under-rated_tors\example.html            | HTML       |         53 |          0 |          9 |         62 |
+| d:\editing stuff\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\under-rated_tors\landing.html            | HTML       |         60 |          3 |          5 |         68 |
+| d:\editing stuff\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\under-rated_tors\notEF5.html             | HTML       |         61 |          0 |          8 |         69 |
+| d:\editing stuff\vss\connorleatherdale.github.io\pages\Blogs\Photography\2022.html                                | HTML       |         47 |          0 |          9 |         56 |
+| d:\editing stuff\vss\connorleatherdale.github.io\pages\Blogs\Photography\Aurora's.html                            | HTML       |         50 |          0 |          8 |         58 |
+| d:\editing stuff\vss\connorleatherdale.github.io\pages\Meteorology.html                                           | HTML       |         57 |          1 |          8 |         66 |
+| d:\editing stuff\vss\connorleatherdale.github.io\pages\Photography.html                                           | HTML       |         63 |          4 |         12 |         79 |
+| d:\editing stuff\vss\connorleatherdale.github.io\sitemap.xml                                                      | XML        |         69 |          0 |          2 |         71 |
+| d:\editing stuff\vss\connorleatherdale.github.io\style.css                                                        | PostCSS    |        445 |         33 |        108 |        586 |
+| Total                                                                                                             |            |      2,248 |        105 |        409 |      2,762 |
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
