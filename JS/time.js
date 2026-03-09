@@ -9,7 +9,7 @@ function updateTime(){
     var minutes = currentTime.getMinutes()
     var seconds = currentTime.getSeconds()
     
-    day = day + 1;
+    var actualDay = day + 1;
 
     if (minutes < 10){
         minutes = "0" + minutes
@@ -56,7 +56,7 @@ function updateTime(){
     }
 
     // day and year
-    t_str += ", " + day + ", " + year;
+    t_str += ", " + actualDay + ", " + year;
 
     document.getElementById('time_span').innerHTML = t_str;
 }

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Settings</title>
+        <link rel="icon" type="image" href="../Images/image_1.jpg">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: white;
+            }
+        </style>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJEKCC4EGF"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-MJEKCC4EGF');
+        </script>
+    </head>
+    <head>
+        <link rel="stylesheet" href="../style.css"/>
+    </head>
+    <body>
+    <div class="Header">
+        <div>
+            <h1>Connor Leatherdale - Settings</h1>
+            <p id="time_span"></p>
+            <script src="../JS/time.js"></script>
+        </div>
+        <ul class="topnav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="About.html">About Me</a></li>
+        <li><a href="Photography.html">Photography</a></li>
+        <li><a href="Meteorology.html">Meteorology</a></li>
+        <li><a href="Blogs.html">Blogs</a></li>
+        <li><a href="settings.html">Settings</a></li>
+        </ul>
+
+    </div>
+
+    <div class="Body">
+        <h2>Settings</h2>
+        <p>Clears all the values in the localStorage in your browser. Deletes all the valeus in it. Currently used for storing your settings.</p>
+        <button id="clrLclStr" type="button" >Clear storage</button>
+
+        <br><br>
+
+        <form method="get" action="test.js" id="form">
+            
+            <input type="checkbox" id="light/darkMode"> Light/dark mode (checked = dark mode)
+            <br><br>
+            <button type="button" id="save">Save Settings</button>
+            
+        </form>
+
+        <h2>info</h2>
+        <p id="storage">IndexedDB Storage: </p>
+        <p id="storageUsed">IndexedDB used Storage percentage: </p>
+        <p id="localStorage">Local Storage Size: </p>
+    </div>
+
+
+    <script src="../JS/settings.js"></script>
+</body>
+</html>

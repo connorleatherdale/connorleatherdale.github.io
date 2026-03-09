@@ -32,6 +32,19 @@
   margin-top: 25%;
 }
 
+/*
+  general properties
+*/
+
+button {
+  width: fit-content;
+  margin-left: 10px;
+}
+
+form {
+  margin-left: 10px;
+}
+
 body {
   
   background-repeat: no-repeat;
@@ -74,6 +87,8 @@ body {
   position: relative;
   top: -20%;
 }
+
+
 
 ul.topnav {
   display: flex;
