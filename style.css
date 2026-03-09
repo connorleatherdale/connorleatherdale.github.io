@@ -359,7 +359,7 @@ ul.topnav li a:hover {
 .content {
   flex: 80%;
   padding: 20px;
-  align-items: center;
+  
   background-color: rgba(185, 185, 185, 0.1) ;
   background-size: auto;
   border-style: solid;
@@ -515,6 +515,8 @@ ul.topnav li a:hover {
     -1px 1px 0 #000,
     1px 1px 0 #000;
   text-indent: 30px;
+  text-align: left;
+  overflow: hidden;
 }
 
 .content a:link {
@@ -557,30 +559,6 @@ ul.topnav li a:hover {
 
 .content img {
   border: 1px solid #ddd;
+  float: left;
   margin-right: 10px;
-  display: inline-block;
-  vertical-align: top;
-  float: none !important;
-}
-
-.content p {
-  
-  
-  font-size: large;
-  /*padding-top: 10px;*/
-  
-  color: #dddddd;
-  text-shadow: 
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
-  text-indent: 30px;
-  display: flex;
-  
-  align-items: flex-start;
-  justify-content: space-between;
-
-
-  
 }
