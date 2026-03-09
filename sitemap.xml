@@ -4,67 +4,73 @@
 
   <url>
        <loc>https://connorleatherdale-github-io.pages.dev/</loc>
-       <lastmod>2026-02-04T13:42:17+00:00</lastmod>
+       <lastmod>2026-03-09T12:32:11+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>1.0000</priority>
   </url>
   <url>
        <loc>https://connorleatherdale-github-io.pages.dev/pages/About</loc>
-       <lastmod>2026-02-04T13:42:17+00:00</lastmod>
+       <lastmod>2026-03-09T12:32:11+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://connorleatherdale-github-io.pages.dev/pages/Photography</loc>
-       <lastmod>2026-02-04T13:42:17+00:00</lastmod>
+       <lastmod>2026-03-09T12:32:11+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://connorleatherdale-github-io.pages.dev/pages/Meteorology</loc>
-       <lastmod>2026-02-04T13:42:17+00:00</lastmod>
+       <lastmod>2026-03-09T12:32:11+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://connorleatherdale-github-io.pages.dev/pages/Blogs</loc>
-       <lastmod>2026-02-04T13:42:17+00:00</lastmod>
+       <lastmod>2026-03-09T12:32:11+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://connorleatherdale-github-io.pages.dev/pages/Blogs/Photography/Aurora's</loc>
-       <lastmod>2026-02-04T13:42:17+00:00</lastmod>
+       <lastmod>2026-03-09T12:32:11+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://connorleatherdale-github-io.pages.dev/pages/Blogs/Photography/2022</loc>
-       <lastmod>2026-02-04T13:42:17+00:00</lastmod>
+       <lastmod>2026-03-09T12:32:11+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://connorleatherdale-github-io.pages.dev/pages/Blogs/Meteorology/g_earth</loc>
-       <lastmod>2026-02-04T13:42:17+00:00</lastmod>
+       <lastmod>2026-03-09T12:32:11+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://connorleatherdale-github-io.pages.dev/pages/Blogs/Meteorology/DAT</loc>
-       <lastmod>2026-02-04T13:42:17+00:00</lastmod>
+       <lastmod>2026-03-09T12:32:11+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://connorleatherdale-github-io.pages.dev/pages/Blogs/Meteorology/helpful_links</loc>
-       <lastmod>2026-02-04T13:42:17+00:00</lastmod>
+       <lastmod>2026-03-09T12:32:11+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://connorleatherdale-github-io.pages.dev/pages/Blogs/Meteorology/Elie_Oakville</loc>
-       <lastmod>2026-02-04T13:42:17+00:00</lastmod>
+       <lastmod>2026-03-09T12:32:11+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.4096</priority>
+  </url>
+  <url>
+       <loc>https://connorleatherdale-github-io.pages.dev/pages/Blogs/Meteorology/EF_scale</loc>
+       <lastmod>2026-03-09T12:32:11+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.4096</priority>
   </url>
