@@ -41,7 +41,7 @@
 
     </div>
 
-    <div class="Body">
+    <div id="content" class="Body">
         <h2>Settings</h2>
         <p>Clears all the values in the localStorage in your browser. Deletes all the valeus in it. Currently used for storing your settings.</p>
         <button id="clrLclStr" type="button" >Clear storage</button>
@@ -50,9 +50,9 @@
 
         <form method="get" action="test.js" id="form">
             
-            <input type="checkbox" id="light/darkMode"> Light/dark mode (checked = dark mode)
+            <input type="checkbox" id="light/darkMode"> <text>Light/dark mode (checked = dark mode)</text> 
             <br><br>
-            <button type="button" id="save">Save Settings</button>
+            <button type="button" onclick="save()">Save Settings</button>
             
         </form>
 
@@ -64,5 +64,6 @@
 
 
     <script src="../JS/settings.js"></script>
+    <script src="../JS/settingsLoader.js"></script>
 </body>
 </html>

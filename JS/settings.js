@@ -57,11 +57,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // the actual settings form
-document.getElementById("save").addEventListener("click", save) 
-
-function save(){
+function save() {
     let darkOrLight = document.getElementById("light/darkMode").checked;
-    localStorage.setItem("value1",darkOrLight);
+    localStorage.setItem("light/dark mode",darkOrLight);
 }
 
 
