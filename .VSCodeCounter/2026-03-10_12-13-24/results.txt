@@ -1,0 +1,71 @@
+Date : 2026-03-10 12:13:24
+Directory : c:\Users\conno\Documents\vss\connorleatherdale.github.io
+Total : 29 files,  2414 codes, 148 comments, 457 blanks, all 3019 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| HTML       |         21 |      1,678 |         39 |        245 |      1,962 |
+| PostCSS    |          1 |        458 |         35 |        115 |        608 |
+| JavaScript |          5 |        186 |         74 |         82 |        342 |
+| XML        |          1 |         75 |          0 |          2 |         77 |
+| Markdown   |          1 |         17 |          0 |         13 |         30 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                      | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                         |         29 |      2,414 |        148 |        457 |      3,019 |
+| . (Files)                                                                                                                 |          5 |        700 |         47 |        153 |        900 |
+| JS                                                                                                                        |          3 |        116 |         43 |         39 |        198 |
+| pages                                                                                                                     |         21 |      1,598 |         58 |        265 |      1,921 |
+| pages (Files)                                                                                                             |          5 |        295 |          7 |         45 |        347 |
+| pages\Blogs                                                                                                               |         16 |      1,303 |         51 |        220 |      1,574 |
+| pages\Blogs\Meteorology                                                                                                   |         14 |      1,206 |         51 |        203 |      1,460 |
+| pages\Blogs\Meteorology (Files)                                                                                           |          5 |        633 |          7 |         77 |        717 |
+| pages\Blogs\Meteorology\Specific_tors                                                                                     |          1 |        160 |          4 |         32 |        196 |
+| pages\Blogs\Meteorology\test                                                                                              |          3 |        129 |         37 |         59 |        225 |
+| pages\Blogs\Meteorology\under-rated_tors                                                                                  |          5 |        284 |          3 |         35 |        322 |
+| pages\Blogs\Meteorology\under-rated_tors (Files)                                                                          |          3 |        174 |          3 |         22 |        199 |
+| pages\Blogs\Meteorology\under-rated_tors\2010's                                                                           |          1 |          0 |          0 |          1 |          1 |
+| pages\Blogs\Meteorology\under-rated_tors\2020's                                                                           |          1 |        110 |          0 |         12 |        122 |
+| pages\Blogs\Photography                                                                                                   |          2 |         97 |          0 |         17 |        114 |
++---------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                                  | language   | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\JS\settings.js                                                   | JavaScript |         36 |         33 |         19 |         88 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\JS\settingsLoader.js                                             | JavaScript |         28 |          7 |         12 |         47 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\JS\time.js                                                       | JavaScript |         52 |          3 |          8 |         63 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\README.md                                                        | Markdown   |         17 |          0 |         13 |         30 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\format.html                                                      | HTML       |         38 |          1 |          5 |         44 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\index.html                                                       | HTML       |        112 |         11 |         18 |        141 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\pages\About.html                                                 | HTML       |         50 |          0 |          7 |         57 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\pages\Blogs.html                                                 | HTML       |         62 |          1 |          9 |         72 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\DAT.html                                 | HTML       |         85 |          1 |         11 |         97 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\EF_scale.html                            | HTML       |        265 |          6 |         42 |        313 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\Placeholder.html                         | HTML       |          0 |          0 |          1 |          1 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\Specific_tors\Elie_Oakville.html         | HTML       |        160 |          4 |         32 |        196 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\g_earth.html                             | HTML       |         58 |          0 |          8 |         66 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\helpful_links.html                       | HTML       |        225 |          0 |         15 |        240 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\test\test.html                           | HTML       |         59 |          6 |         16 |         81 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\test\test.js                             | JavaScript |         63 |         29 |         40 |        132 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\test\worker.js                           | JavaScript |          7 |          2 |          3 |         12 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\under-rated_tors\2010's\placeholder.html | HTML       |          0 |          0 |          1 |          1 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\under-rated_tors\2020's\mayfield.html    | HTML       |        110 |          0 |         12 |        122 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\under-rated_tors\example.html            | HTML       |         53 |          0 |          9 |         62 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\under-rated_tors\landing.html            | HTML       |         60 |          3 |          5 |         68 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\pages\Blogs\Meteorology\under-rated_tors\notEF5.html             | HTML       |         61 |          0 |          8 |         69 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\pages\Blogs\Photography\2022.html                                | HTML       |         47 |          0 |          9 |         56 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\pages\Blogs\Photography\Aurora's.html                            | HTML       |         50 |          0 |          8 |         58 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\pages\Meteorology.html                                           | HTML       |         59 |          1 |          7 |         67 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\pages\Photography.html                                           | HTML       |         65 |          4 |         11 |         80 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\pages\settings.html                                              | HTML       |         59 |          1 |         11 |         71 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\sitemap.xml                                                      | XML        |         75 |          0 |          2 |         77 |
+| c:\Users\conno\Documents\vss\connorleatherdale.github.io\style.css                                                        | PostCSS    |        458 |         35 |        115 |        608 |
+| Total                                                                                                                     |            |      2,414 |        148 |        457 |      3,019 |
++---------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
