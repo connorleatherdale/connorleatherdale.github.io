@@ -75,6 +75,10 @@ function save() {
     //scroll behaviour
     let smoothScrool = document.getElementById("scrollBehaviour").checked; //just realized i totally misspelled scroll but honestly dont car enought to change it
     localStorage.setItem("scrollBehaviour", smoothScrool);
+
+    // if the time in the header should be enabled or disabled
+    let time = document.getElementById("time").checked;
+    localStorage.setItem("time", time);
 }
 
 

@@ -44,7 +44,7 @@ let check1;
 
 
 
-function input(){
+function input() {
     // valueAsNumber is needed, if you try to use .value, when trying to add, treats them as strings, instead of integers, so the math then gets funky
     x = document.getElementById('value1').valueAsNumber; // set the x variable to the input on the form
     formValues[0] = document.getElementById('value1').valueAsNumber;

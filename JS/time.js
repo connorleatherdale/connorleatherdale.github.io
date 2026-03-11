@@ -60,4 +60,21 @@ function updateTime(){
 
     document.getElementById('time_span').innerHTML = t_str;
 }
-setInterval(updateTime, 100);
+
+let timeOpacity = localStorage.getItem("time");
+
+// check to see if the time in the header is visable, if it isnt, dont bother updating it, if it, update it constantly
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("console loaded");
+    console.log("opacity is " + timeOpacity);
+    if (timeOpacity == "true") {
+        console.log("time is hidden and wont be updated");
+    } else if (timeOpacity == "false") {
+        setInterval(updateTime, 1000);
+        console.log("time isn't hidden and will continue to be updated");
+    } else {
+        console.log("something is not fucking working");
+    }
+});
+
+
