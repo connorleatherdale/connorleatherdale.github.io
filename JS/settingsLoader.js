@@ -11,7 +11,7 @@ function backgroundMode() {
     
 
     if (modeValue == "true") {
-        document.body.style.backgroundColor = "rgb(134, 134, 134)";
+        document.body.style.backgroundColor = "rgb(58, 58, 58)";
         console.log("set background to dark");
     }
     if (modeValue == "false") {

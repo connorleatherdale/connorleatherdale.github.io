@@ -110,23 +110,3 @@ function stopWorker() {
   w = undefined;
 }
 
-
-
-
-
-
-
-/*
-
-variable DBZ = inputed user value
-
-if ZDR is between 2-3 dbz
-  give it 20 points
-else if ZDR is between 3-5 DBZ
-  give it 35 points 
-else if ZDR is higher than 5 dbz
-  give it 50 points
-
-
-
-*/
