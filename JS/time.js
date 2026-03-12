@@ -4,7 +4,7 @@ function updateTime(){
     var currentTime = new Date()
     var year = currentTime.getFullYear()
     var month = currentTime.getMonth()
-    var day = currentTime.getDay()
+    var day = currentTime.getUTCDate()
     var hours = currentTime.getHours()
     var minutes = currentTime.getMinutes()
     var seconds = currentTime.getSeconds()
