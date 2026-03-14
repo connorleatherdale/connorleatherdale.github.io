@@ -48,6 +48,7 @@ Tornado - specific
     - Alonsa EF4
     - Didsbury EF4
     - the 1987 edmonton f4
+    - maybe some of the more obscure (E)F4's and 5's
     - maybe a list of all (E)f-3 tornadoes and equivalents
 
 
