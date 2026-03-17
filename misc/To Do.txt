@@ -54,7 +54,7 @@ Tornado - specific
     - maybe a list of all (E)f-3 tornadoes and equivalents
     - Rosa MB f4 1977 (ted fujita rated this canadian tor, interesting)
     - maybe the oakfield WI F5 1996
-    - barneveld WI F5 1984
+    - barneveld WI F5 1984 
     - maybe the lawrenceburg F5 (maybe echo wants to do it?)
     - april 27th 2011 probably
     - the hesston and goessel F5's
