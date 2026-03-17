@@ -28,6 +28,8 @@ To-do (javascript)
 What are radars?
     - talk about what a radar is, what those weird white balls you sometimes see along the road
     - talk about the different kinds of radars, and what each country uses
+        - the US and the difference between the WSR-88d's and the terminal radars
+    - the history behind radars (start from like the WSR-1, which has an interesting history ig)
 
 radar sites around the world
     - sort by country
@@ -50,6 +52,32 @@ Tornado - specific
     - the 1987 edmonton f4
     - maybe some of the more obscure (E)F4's and 5's
     - maybe a list of all (E)f-3 tornadoes and equivalents
+    - Rosa MB f4 1977 (ted fujita rated this canadian tor, interesting)
+    - maybe the oakfield WI F5 1996
+    - barneveld WI F5 1984
+    - maybe the lawrenceburg F5 (maybe echo wants to do it?)
+    - april 27th 2011 probably
+    - the hesston and goessel F5's
+    - maybe the andover F5 (cause nukes idk)
+    - probably just bassfield as a tornado magnet
+    - the lubbock  and Xenia F5's as the two "f6's"
+    - Broken Bow OK F5 
+        - apparently the rating is disputed since the damage was borderline f4, interesting
+    - Brownwood Texas F5 1976
+    - bakersfielf 1990 F4
+        - this is the one that is arguably F5 level damage
+        - the mosquite trees got shredded, which is interesting and intense ground scouring
+    - Pampa Texas F4 1995
+    - grand island Nebraska 1980 "night of the tornadoes"
+    - harper KS f4 2004
+
+
+tornado magnet cities/towns
+    - bassfield MI
+    - moore OK
+    - Tanner AL 
+
+
 
 
 
