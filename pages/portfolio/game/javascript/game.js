@@ -35,6 +35,10 @@ function drawPlayer() {
 
 // i think ill use this as the "main()" fuction, since alot of the time, what would needed to be done will happen on a key press anyways, probably will handle movement with this anyways
 
+document.addEventListener('keydown', (event) => {
+    console.log(event.key);
+});
+
 // Let k listen for keydown
 document.addEventListener("keydown", function (event) {
 // Then display the event.key
@@ -62,17 +66,26 @@ document.addEventListener("keydown", function (event) {
     } 
     // going to need to do the checks if the player wants to move diagonally, for example, if W and A are pressed, then move both w and left
     // might have to redo the keypress event 
+
+    if (event.key == 'w' && event.key == 'd') {
+        ctx.clearRect(player.x,player.y,player.width,player.height);
+        player.x += 5;
+        player.y -= 5
+        drawPlayer();
+    }
     
   
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  drawPlayer();
 });
 
 
 // checks to see if canvas is supported or not
 if (canvas.getContext) {
   console.log("canvas is supported");
-  
-
-
   
   // drawing code here
 } else {

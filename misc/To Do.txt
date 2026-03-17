@@ -28,6 +28,10 @@ game
         - maybe like a side-scroller or something
         - open world rpg maybe
         - definitely need to brainstorm ideas
+    
+    - cookie clicker/incremental game
+        - need i say more?
+        
 
     - resources to use 
         - https://pixijs.com/ 
