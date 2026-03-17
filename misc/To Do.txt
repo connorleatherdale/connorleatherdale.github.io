@@ -20,7 +20,19 @@ To-do (javascript)
         - to do list things that automatically adds and deletes things
         - weather app using weather api's
         - maybe a random quote generator (also using api's)
+        - create a game
 
+
+game
+    - ideas
+        - maybe like a side-scroller or something
+        - open world rpg maybe
+        - definitely need to brainstorm ideas
+
+    - resources to use 
+        - https://pixijs.com/ 
+        - https://www.codewizardshq.com/javascript-games/#h-is-javascript-good-for-game-development 
+        - https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial 
 
 
 
