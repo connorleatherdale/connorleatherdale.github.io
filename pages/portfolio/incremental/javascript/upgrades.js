@@ -1,8 +1,14 @@
 // file for all the event listeners and whatnot
 
+//internal functions
+function cost(value, cost) { // cost function, meant for taking a value in, then subtracting how much a thing should cost
+    return value - cost;
+}
+
+
+//export functions
 
 //checks if the values in local storage are 1, if they are, dont show the button, if they arent, show the button
-
 export function checks() {
     // checking if our variables are in local storage or not
     if (localStorage.getItem("valuePerTick") === null) { // check if valuePerTick exists, if it doesn't, create it
@@ -21,19 +27,25 @@ export function checks() {
     if (localStorage.getItem("upgrade1") == "1") {
         console.log("button shouldn't be shown")
         document.getElementById("upgrade1").disabled = true;
-        document.getElementById("upgrade1").style.opacity = "1";
+        document.getElementById("upgrade1").style.opacity = 0;
     } else {
         console.log("button should be shown")
+        document.getElementById("upgrade1").disabled = false;
+        document.getElementById("upgrade1").style.opacity = 1;
     }
 }
 
 // check if it can be upgrade, then if its upgraded, hide it
 export function upgrade1() {
     console.log("you clicked a button")
-    
-    if (localStorage.getItem("upgrade1") == 0){
-        localStorage.setItem("upgrade1", 1);
-        
+    let currentValue = Number(localStorage.getItem("value"))
+    if (Number(localStorage.getItem("value")) >= 100) {
+        if (localStorage.getItem("upgrade1") == 0){
+            localStorage.setItem("upgrade1", 1);
+            localStorage.setItem("value", cost(currentValue, 100));
+        }
     }
+
+    
     checks();
 }

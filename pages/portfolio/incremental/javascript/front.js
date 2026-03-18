@@ -24,7 +24,7 @@ import { checks } from "./upgrades.js";
 
 
 let value = Number(localStorage.getItem("value"));
-let valuePerTick = 1; // how much is added to value each tick
+let valuePerTick = Number(localStorage.getItem("valuePerTick")); // how much is added to value each tick
 let updateRate = 1000; // gonna be used to change the length of a tick
 let valueMultiplyer = 1;
 
@@ -32,7 +32,7 @@ const output = document.getElementById("value"); // just the main value to be sh
 
 document.addEventListener("DOMContentLoaded", function () {
     output.innerHTML = localStorage.getItem("value");
-    setInterval(updateValue, updateRate);
+    setInterval(tick, updateRate);
     checks();
 
 });
@@ -47,7 +47,7 @@ if (localStorage.getItem("upgrade1") != 1) {
 
 
 
-// going to used IndexedDB to store everything
+/* going to used IndexedDB to store everything
 
 // This works on all devices/browsers, and uses IndexedDBShim as a final fallback 
 var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
@@ -80,23 +80,34 @@ open.onsuccess = function() {
         db.close();
     };
 }
-
+*/
 
 
 // adding the logic to upgrade buttons
 
 document.getElementById("upgrade1").addEventListener("click", upgrade1);
 
-//document.getElementById("upgrade1").disabled = true;
 
 
 
+// functions
 
+//tick function, runs every X amount of time. Inside are things that need to be checked/updated every tick
+function tick() {
+    updateValue();
+    checks();
+    // checking to see if any upgrades happened
+    if (Number(localStorage.getItem("upgrade1")) == 1) {
+        localStorage.setItem("valuePerTick",2);
+    }
+    console.log("tick");
+}
 
-
+// function runs constantly
 function updateValue() {
     value += valuePerTick*valueMultiplyer;
     output.innerHTML = value;
     localStorage.setItem("value", value);
+    console.log("updated number");
 }
 
