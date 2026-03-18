@@ -1,13 +1,51 @@
-// the front end for the incremental game
+/* 
+    the front end for the incremental game
 
-//gonna use workers for this, since the values might go nuts, and update constantly
+    Essentially, this file is going to be used if anything in the actual HTML DOM needs to be changed, and calls everything else
+*/
+
+//gonna use workers for this, since the values might go nuts, and update constantly, will work on that later
+
+
+//Importing all the functions
+
+import { upgrade1 } from "./upgrades.js";
+import { checks } from "./upgrades.js";
+
+
+
+
+
 
 //declare global variables
 
-let value = 0;
+// setting the local storage variables to the defaults
+
+
+
+let value = Number(localStorage.getItem("value"));
 let valuePerTick = 1; // how much is added to value each tick
-let updateRate = 1; // gonna be used to change the length of a tick
+let updateRate = 1000; // gonna be used to change the length of a tick
 let valueMultiplyer = 1;
+
+const output = document.getElementById("value"); // just the main value to be shown
+
+document.addEventListener("DOMContentLoaded", function () {
+    output.innerHTML = localStorage.getItem("value");
+    setInterval(updateValue, updateRate);
+    checks();
+
+});
+
+// setting up the upgrades
+
+if (localStorage.getItem("upgrade1") != 1) {
+    localStorage.setItem("upgrade1", 0);
+}
+
+
+
+
 
 // going to used IndexedDB to store everything
 
@@ -45,17 +83,16 @@ open.onsuccess = function() {
 
 
 
+// adding the logic to upgrade buttons
+
+document.getElementById("upgrade1").addEventListener("click", upgrade1);
+
+//document.getElementById("upgrade1").disabled = true;
 
 
 
 
 
-const output = document.getElementById("value");
-
-document.addEventListener("DOMContentLoaded", function () {
-  output.innerHTML = localStorage.getItem("value");
-  setInterval(updateValue, updateRate);
-});
 
 function updateValue() {
     value += valuePerTick*valueMultiplyer;
