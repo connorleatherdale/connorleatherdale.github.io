@@ -31,12 +31,16 @@ game
     
     - cookie clicker/incremental game
         - need i say more?
-        
+
 
     - resources to use 
         - https://pixijs.com/ 
         - https://www.codewizardshq.com/javascript-games/#h-is-javascript-good-for-game-development 
         - https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial 
+        - https://bengsfort.github.io/articles/making-a-js-game-part-1-game-engine/ 
+    
+    not for javascript, but for python, found this out, might use it to make an app
+        - https://medium.com/analytics-vidhya/how-to-build-your-first-desktop-application-in-python-7568c7d74311
 
 
 
