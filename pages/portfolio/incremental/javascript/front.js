@@ -23,17 +23,20 @@ import { checks } from "./upgrades.js";
 
 
 
-let value = Number(localStorage.getItem("value"));
-let valuePerTick = Number(localStorage.getItem("valuePerTick")); // how much is added to value each tick
-let updateRate = 1000; // gonna be used to change the length of a tick
-let valueMultiplyer = 1;
+let value = 0;
+let valuePerTick = 1;//Number(localStorage.getItem("valuePerTick")); // how much is added to value each tick
+let updateRate = 100; // gonna be used to change the length of a tick
+let valueMultiplyer = 1;//Number(localStorage.getItem("valueMultiplier"));
 
 const output = document.getElementById("value"); // just the main value to be shown
 
 document.addEventListener("DOMContentLoaded", function () {
     output.innerHTML = localStorage.getItem("value");
+    value = localStorage.getItem("value");
     setInterval(tick, updateRate);
+    setInterval(saveVar,1000);
     checks();
+    
 
 });
 
@@ -92,7 +95,8 @@ document.getElementById("upgrade1").addEventListener("click", upgrade1);
 
 // functions
 
-//tick function, runs every X amount of time. Inside are things that need to be checked/updated every tick
+//tick function, runs every X amount of time. Inside are things that need to be checked/updated every tick 
+//ticks are based off the updateRate value
 function tick() {
     updateValue();
     checks();
@@ -107,7 +111,12 @@ function tick() {
 function updateValue() {
     value += valuePerTick*valueMultiplyer;
     output.innerHTML = value;
-    localStorage.setItem("value", value);
+    
     console.log("updated number");
 }
 
+
+// function to save the value var every few seconds or so
+function saveVar() {
+    localStorage.setItem("value", value);
+}

@@ -1,11 +1,5 @@
 // file for all the event listeners and whatnot
 
-//internal functions
-function cost(value, cost) { // cost function, meant for taking a value in, then subtracting how much a thing should cost
-    return value - cost;
-}
-
-
 //export functions
 
 //checks if the values in local storage are 1, if they are, dont show the button, if they arent, show the button
@@ -38,11 +32,11 @@ export function checks() {
 // check if it can be upgrade, then if its upgraded, hide it
 export function upgrade1() {
     console.log("you clicked a button")
-    let currentValue = Number(localStorage.getItem("value"))
+    let currentValue = Number(localStorage.getItem("value")) - 25;
     if (Number(localStorage.getItem("value")) >= 100) {
         if (localStorage.getItem("upgrade1") == 0){
             localStorage.setItem("upgrade1", 1);
-            localStorage.setItem("value", cost(currentValue, 100));
+            localStorage.setItem("value", currentValue);
         }
     }
 
