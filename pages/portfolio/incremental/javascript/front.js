@@ -4,13 +4,9 @@
     Essentially, this file is going to be used if anything in the actual HTML DOM needs to be changed, and calls everything else
 */
 
-//gonna use workers for this, since the values might go nuts, and update constantly, will work on that later
+//might use workers, so that some of the computation is on a different thread than the main thread, so performance is better
 
 
-//Importing all the functions
-
-import { upgrade1 } from "./upgrades.js";
-import { checks } from "./upgrades.js";
 
 
 
@@ -19,104 +15,27 @@ import { checks } from "./upgrades.js";
 
 //declare global variables
 
-// setting the local storage variables to the defaults
-
-
-
 let value = 0;
 let valuePerTick = 1;//Number(localStorage.getItem("valuePerTick")); // how much is added to value each tick
-let updateRate = 100; // gonna be used to change the length of a tick
+let tickLength = 1000; // gonna be used to change the length of a tick
 let valueMultiplyer = 1;//Number(localStorage.getItem("valueMultiplier"));
 
 const output = document.getElementById("value"); // just the main value to be shown
 
+// sets everything when the page loads
 document.addEventListener("DOMContentLoaded", function () {
-    output.innerHTML = localStorage.getItem("value");
-    value = localStorage.getItem("value");
-    setInterval(tick, updateRate);
-    setInterval(saveVar,1000);
-    checks();
+    output.innerHTML = value;
+    setInterval(perTick, tickLength); // set the perTick function to be called every (tickLength) seconds
+
+    
     
 
 });
 
-// setting up the upgrades
-
-if (localStorage.getItem("upgrade1") != 1) {
-    localStorage.setItem("upgrade1", 0);
-}
-
-
-
-
-
-/* going to used IndexedDB to store everything
-
-// This works on all devices/browsers, and uses IndexedDBShim as a final fallback 
-var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
-
-// Open (or create) the database
-var open = indexedDB.open("Incremental", 1);
-
-// Create the schema
-open.onupgradeneeded = function() {
-    var db = open.result;
-    var store = db.createObjectStore("Values", {keyPath: "id"});
-    var index = store.createIndex("value", "value");
-};
-
-open.onsuccess = function() {
-    // Start a new transaction
-    var db = open.result;
-    var tx = db.transaction("Values", "readwrite");
-    var store = tx.objectStore("Values");
-    var index = store.index("value");
-
-    // Add some data
-    store.put({id: 1, value: value});
-    
-    // Query the data
-    
-
-    // Close the db when the transaction is done
-    tx.oncomplete = function() {
-        db.close();
-    };
-}
-*/
-
-
-// adding the logic to upgrade buttons
-
-document.getElementById("upgrade1").addEventListener("click", upgrade1);
-
-
-
-
-// functions
-
-//tick function, runs every X amount of time. Inside are things that need to be checked/updated every tick 
-//ticks are based off the updateRate value
-function tick() {
-    updateValue();
-    checks();
-    // checking to see if any upgrades happened
-    if (Number(localStorage.getItem("upgrade1")) == 1) {
-        localStorage.setItem("valuePerTick",2);
-    }
-    console.log("tick");
-}
-
-// function runs constantly
-function updateValue() {
-    value += valuePerTick*valueMultiplyer;
+// every "tick" (based on the tickLength Variable)
+function perTick() {
+    let newValue = value + (valuePerTick*valueMultiplyer);
+    value = newValue;
     output.innerHTML = value;
-    
-    console.log("updated number");
-}
-
-
-// function to save the value var every few seconds or so
-function saveVar() {
-    localStorage.setItem("value", value);
+    console.log("new tick");
 }
