@@ -37,8 +37,15 @@ let valueMultiplyer = 1;//Number(localStorage.getItem("valueMultiplier"));
 // checking upgrades
 
 let upgrd1 = Number(localStorage.getItem("upgrade1"));
+let upgrd2 = Number(localStorage.getItem("upgradeMultiplier1"));
 
 const output = document.getElementById("value"); // just the main value to be shown
+
+// upgrade listeners
+//upgrade1 listener
+document.getElementById("upgrade1").addEventListener("click", upgrade1);
+//next button listener
+document.getElementById("upgradeMultiplier1").addEventListener("click",upgrade2);
 
 // sets everything when the page loads
 document.addEventListener("DOMContentLoaded", function () {
@@ -56,14 +63,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // this function will probably be put into a webworker, to run on a different thread
+
 // every "tick" (based on the tickLength Variable)
+//IMPORTANT FUNCTION
 function perTick() {
+    upgradeCheck();
     let newValue = value + (valuePerTick*valueMultiplyer);
     value = newValue;
     output.innerHTML = value;
     console.log("new tick");
     checkLocalStorage();
+    buttonCheck();
+
+    //changing debug
+    document.getElementById("VPT").innerHTML = "Value Per Tick: " + valuePerTick;
+    document.getElementById("TL").innerHTML = "Tick Length (in ms): " + tickLength;
+    document.getElementById("MP").innerHTML = "value multiplier: " + valueMultiplyer;
 }
+
+//dealing with the buttons, whether we should hide and disable, or show and enable
+function buttonCheck() {
+    //checking the first button
+    if (localStorage.getItem("upgrade1") == "1") {
+        console.log("button shouldn't be shown")
+        document.getElementById("upgrade1").disabled = true;
+        document.getElementById("upgrade1").style.opacity = 0;
+    } else {
+        console.log("button should be shown")
+        document.getElementById("upgrade1").disabled = false;
+        document.getElementById("upgrade1").style.opacity = 1;
+    }
+    //checking the next button, the upgrade multiplier one
+
+}
+
+// checks if we need to upgrade the values or not
+function upgradeCheck() {
+    if (localStorage.getItem("upgrade1") == "1") {
+        localStorage.setItem("valuePerTick", 2);
+        valuePerTick = 2;
+    }
+}
+
+
 // save value, periodically stores whatever is in the valeu var in this file, and saves it to local storage
 function saveValue() {
     localStorage.setItem("value", value);
@@ -78,7 +120,7 @@ function checkLocalStorage() {
     }
 
     if (localStorage.getItem("updateRate") === null) { // check if update rate exists
-        localStorage.setItem("tickLength", 100);
+        localStorage.setItem("tickLength", 1000);
     }
 
     if (localStorage.getItem("valueMultiplier") === null) { // check if valueMultiplier exists
@@ -87,6 +129,10 @@ function checkLocalStorage() {
 
     if (localStorage.getItem("upgrade1") === null) { // check if upgrade1 exists
         localStorage.setItem("upgrade1", 0);
+    }
+
+    if (localStorage.getItem("upgradeMultiplier1" === null)) {
+        localStorage.setItem("upgradeMultiplier1", 0);
     }
 
     // checking if we need to implement any upgrades
@@ -100,14 +146,19 @@ function checkLocalStorage() {
     
 }  
 
-// upgrade1 listener
-document.getElementById("upgrade1").addEventListener("click", upgrade1);
-
+// upgrade functions
 function upgrade1() {
     if (upgrd1 == 0) {
-        localStorage.setItem("upgrade1",1);
+        if (value >= 50){
+            localStorage.setItem("upgrade1",1);
+            value -= 50;
+        }
     }
     if (upgrd1 == 1) {
         localStorage.setItem("upgrade1",1);
     }
+}
+
+function upgrade2() {
+    
 }

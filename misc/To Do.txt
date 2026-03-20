@@ -22,6 +22,14 @@ To-do (javascript)
         - maybe a random quote generator (also using api's)
         - create a game
 
+    - ideas for js
+        - create a rendering system
+            - would be bound by the cpu
+            - maybe do some raytracing
+                - has been done before
+                - https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-ray-tracing/implementing-the-raytracing-algorithm.html
+                - https://github.com/ercang/raytracer-js?tab=readme-ov-file 
+
 
 game
     - ideas
