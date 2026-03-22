@@ -94,7 +94,13 @@ function buttonCheck() {
         document.getElementById("upgrade1").style.opacity = 1;
     }
     //checking the next button, the upgrade multiplier one
-
+    if (localStorage.getItem("upgrade2") == "1") {
+        document.getElementById("upgradeMultiplier1").disabled = true;
+        document.getElementById("upgradeMultiplier1").style.opacity = 0;
+    } else {
+        document.getElementById("upgradeMultiplier1").disabled = false;
+        document.getElementById("upgradeMultiplier1").style.opacity = 1;
+    }
 }
 
 // checks if we need to upgrade the values or not
@@ -102,6 +108,10 @@ function upgradeCheck() {
     if (localStorage.getItem("upgrade1") == "1") {
         localStorage.setItem("valuePerTick", 2);
         valuePerTick = 2;
+    }
+    if (localStorage.getItem('upgrade2') == "2"){
+        localStorage.setItem("valueMultiplier", 2);
+        valueMultiplyer = 2;
     }
 }
 
@@ -131,8 +141,8 @@ function checkLocalStorage() {
         localStorage.setItem("upgrade1", 0);
     }
 
-    if (localStorage.getItem("upgradeMultiplier1" === null)) {
-        localStorage.setItem("upgradeMultiplier1", 0);
+    if (localStorage.getItem("upgrade2") === null) { // check if upgrade1 exists
+        localStorage.setItem("upgrade2", 1);
     }
 
     // checking if we need to implement any upgrades
@@ -143,6 +153,7 @@ function checkLocalStorage() {
     tickLength = Number(localStorage.getItem("tickLength"));
     valueMultiplyer = Number(localStorage.getItem("valueMultiplier"));
     upgrd1 = Number(localStorage.getItem("upgrade1"));
+    upgrd2 = Number(localStorage.getItem("upgrade2"));
     
 }  
 
@@ -160,5 +171,14 @@ function upgrade1() {
 }
 
 function upgrade2() {
-    
+    if (upgrd2 == 0) {
+        if (value >= 100){
+            localStorage.setItem("upgrade2", 1);
+            value -= 100;
+        }
+    }
+    if (upgrd2 == 1) {
+        localStorage.setItem("upgrade2", 1);
+    }
+
 }
