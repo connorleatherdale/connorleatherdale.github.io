@@ -9,7 +9,6 @@
 //might use workers, so that some of the computation is on a different thread than the main thread, so performance is better
 
 // found an fps counter, might use this for debugging
-
 var fps = document.getElementById("fps");
 var startTime = Date.now();
 var frame = 0;
@@ -36,8 +35,8 @@ let valueMultiplyer = 1;//Number(localStorage.getItem("valueMultiplier"));
 
 // checking upgrades
 
-let upgrd1 = Number(localStorage.getItem("upgrade1"));
-let upgrd2 = Number(localStorage.getItem("upgradeMultiplier1"));
+let upgrd1;
+let upgrd2;
 
 const output = document.getElementById("value"); // just the main value to be shown
 
@@ -61,6 +60,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // functions
 
+
+// creating functions for calculating cost and whatnot
+function cost(x) {
+    return Math.round(Math.pow(x,2));
+    // returns a rounded exponential function, basic one, f(1)=1, f(2)=4, f(3)=9...
+}
 
 // this function will probably be put into a webworker, to run on a different thread
 
@@ -109,7 +114,7 @@ function upgradeCheck() {
         localStorage.setItem("valuePerTick", 2);
         valuePerTick = 2;
     }
-    if (localStorage.getItem('upgrade2') == "2"){
+    if (localStorage.getItem('upgrade2') == "1"){
         localStorage.setItem("valueMultiplier", 2);
         valueMultiplyer = 2;
     }
@@ -142,7 +147,7 @@ function checkLocalStorage() {
     }
 
     if (localStorage.getItem("upgrade2") === null) { // check if upgrade1 exists
-        localStorage.setItem("upgrade2", 1);
+        localStorage.setItem("upgrade2", 0);
     }
 
     // checking if we need to implement any upgrades
@@ -162,7 +167,7 @@ function upgrade1() {
     if (upgrd1 == 0) {
         if (value >= 50){
             localStorage.setItem("upgrade1",1);
-            value -= 50;
+            value -= cost(upgrd1);
         }
     }
     if (upgrd1 == 1) {
@@ -174,11 +179,10 @@ function upgrade2() {
     if (upgrd2 == 0) {
         if (value >= 100){
             localStorage.setItem("upgrade2", 1);
-            value -= 100;
+            cost(upgrd2);
         }
     }
     if (upgrd2 == 1) {
         localStorage.setItem("upgrade2", 1);
     }
-
 }
