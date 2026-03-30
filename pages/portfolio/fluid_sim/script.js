@@ -155,6 +155,24 @@ gl.drawArrays(gl.TRIANGLES, 0, 3);
 */
 
 
+// listening to the buttons and seeing if we should start or stop the sim
+document.getElementById("start").addEventListener("click", Start);
+document.getElementById("stop").addEventListener("click", stop);
+
+let interval;
+
+//start the sim
+function Start() {
+    interval = setInterval(drawFrame, 10); // draw a new frame every 10ms
+}
+//stop the sim
+function stop() {
+    clearInterval(interval);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    drawCircle(circle.x, circle.y, circle.radius);
+})
 
 
 
@@ -193,6 +211,15 @@ var circle = {
     radius:10
 };
 
+/*
+
+    what i need to do
+        - create a loop at the start to create a grid of circles
+        - do the collisions between each circle
+            - might be costly to do each frame, if i have a lot of circles
+
+*/
+
 //function to draw the circle
 function drawCircle(x, y, radius) {
     ctx.beginPath();
@@ -200,6 +227,20 @@ function drawCircle(x, y, radius) {
     ctx.arc(x,y,radius,0, Math.PI * 2, true); // arc(position X, position Y, radtius, start angle, stop angle, which way to draw)
 
     ctx.stroke();
+
+    /*
+    // this is very interesting, might make a gas sim out of this 
+    for (let i = 0; i < 5; i++) {
+        const x = 30 + Math.random() * 140; // Random X position
+        const y = 30 + Math.random() * 140; // Random Y position
+        const radius = 30;                  // Circle radius
+
+        ctx.beginPath();
+        ctx.arc(x, y, radius, 0, Math.PI * 2, false);
+        ctx.strokeStyle = 'blue';
+        ctx.stroke();
+    }
+        */
 }
 
 
@@ -207,7 +248,9 @@ function drawCircle(x, y, radius) {
 
 const gravity = 9.81; //gravity constant (acceleration)
 
-
+function collision() {
+    console.log("im just here as a placeholder");
+}
 
 
 
@@ -223,14 +266,13 @@ function drawFrame () {
 
     // checking to see if the circle touches the bottom of the border, then set the center position to be equal to the border, but offset it by the radius, so the edge of the circle only touches the border. 
     //Runs every frame, which could be costly, but eh, needs to be checked, esp if i try to create a fluid
+    //all the if statements here might need to be in a loop, to check every single circle
     if (circle.y + circle.radius >= canvasHeight) {
         circle.y = canvasHeight - circle.radius;
     } 
     //checking to see if it touches the top
-    if (circle.y + circle.radius <= canvasHeight) {
-        circle.y = canvasHeight + circle.radius;
-    }
-
+    
+    
 
     //draw the curcle
     drawCircle(circle.x, circle.y, circle.radius);
@@ -239,5 +281,5 @@ function drawFrame () {
 }
 
 
-setInterval(drawFrame, 10); // draw a new frame every 10ms
+
 
