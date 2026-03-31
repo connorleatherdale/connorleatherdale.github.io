@@ -18,6 +18,10 @@
         - https://www.mikeash.com/pyblog/fluid-simulation-for-dummies.html
             - this one looks good, but i think its meant for a C-based language, though i think i can still use it for javascript
         
+        - notes
+            - might make the actual simulation with calculating the points in a separate thread, so the performance improves
+                - basically do the calculation on one thread, then in script.js, we actually show where they go/actually rendering them
+        
 */
 
 
@@ -29,7 +33,7 @@ var frame = 0;
 function tick() {
   var time = Date.now();
   frame++;
-  if (time - startTime > 1000) {
+  if (time - startTime > 250) {
       fps.innerHTML = (frame / ((time - startTime) / 1000)).toFixed(1);
       startTime = time;
       frame = 0;
@@ -37,6 +41,21 @@ function tick() {
   window.requestAnimationFrame(tick);
 }
 tick();
+
+
+//ram usage
+let RAMp = document.getElementById("ram");
+
+function ram() {
+    if (window.performance && window.performance.memory) { // checks to see if the browser supports it
+        const memoryInfo = window.performance.memory;
+        console.log(`Used Heap: ${memoryInfo.usedJSHeapSize} bytes`);
+        console.log(`Total Heap: ${memoryInfo.totalJSHeapSize} bytes`);
+        console.log(`Heap Limit: ${memoryInfo.jsHeapSizeLimit} bytes`);
+
+        RAMp.innerHTML = "RAM usage: " + Math.floor((memoryInfo.totalJSHeapSize / 1024) / 1024) + "mb";
+    }
+}
 
 
 
@@ -154,31 +173,33 @@ gl.drawArrays(gl.TRIANGLES, 0, 3);
 
 */
 
+// dealing with interacting with the webpage
 
 // listening to the buttons and seeing if we should start or stop the sim
 document.getElementById("start").addEventListener("click", Start);
 document.getElementById("stop").addEventListener("click", stop);
+
+let SIM = document.getElementById("sim");
 
 let interval;
 
 //start the sim
 function Start() {
     interval = setInterval(drawFrame, 10); // draw a new frame every 10ms
+    SIM.innerHTML = "SIM has started";
 }
 //stop the sim
 function stop() {
     clearInterval(interval);
+    SIM.innerHTML = "SIM paused";
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    drawCircle(circle.x, circle.y, circle.radius);
-})
 
 
 
 // dealing with drawing to the canvas
 const canvas = document.getElementById("canvas");
-canvas.height = 500;
+canvas.height = 1000;
 canvas.width = 2000;
 
 // need this to figure out the boundaries of the canvas
@@ -188,28 +209,13 @@ const canvasWidth = canvas.width;
 const ctx = canvas.getContext('2d', { willReadFrequently: true });
 
 
+// variables for storing the points
+let particles = []; // storing each particle as a object, with ID, center x,y and radius
 
-if (canvas.getContext) {
-  // drawing code here
-  
-} else {
-  // canvas-unsupported code here
-}
+//some constants
+const gravity = 9.81; //gravity constant (acceleration)
 
-function draw() {
-  ctx.fillStyle = "rgb(200 0 0)";
-  //ctx.fillRect(10, 10, 50, 50);
-  ctx.beginPath();
-  ctx.arc(75, 75, 50, 0, Math.PI * 2, true); 
-  ctx.stroke();
 
-}
-
-var circle = {
-    x:10,
-    y:20,
-    radius:10
-};
 
 /*
 
@@ -219,6 +225,40 @@ var circle = {
             - might be costly to do each frame, if i have a lot of circles
 
 */
+
+//draw a grid/line of circles
+function firstDraw() {
+    let x = 20; 
+    let y = 20;
+    let radius = 2.5;
+    for (let i = 0; i < 10000; i++) {
+        //drawing the new circle
+        ctx.beginPath();
+        ctx.arc(x,y,radius,0, Math.PI * 2, true); // arc(position X, position Y, radtius, start angle, stop angle, which way to draw)
+        ctx.stroke();
+
+        // adding the new "particle" to the array
+        particles.push(
+            {
+                "id": i, 
+                "x": x,
+                "y": y,
+                "radius": radius
+            }
+        )
+
+        x = x + (radius*2) + 5;
+        
+        if (x >= canvasWidth) {
+            y += (radius*2) + 5;
+            x = 20;
+            if (y > 150) {
+                break;
+            }
+        }
+    }
+}
+console.log(particles);
 
 //function to draw the circle
 function drawCircle(x, y, radius) {
@@ -246,7 +286,7 @@ function drawCircle(x, y, radius) {
 
 // the physics part of everything
 
-const gravity = 9.81; //gravity constant (acceleration)
+
 
 function collision() {
     console.log("im just here as a placeholder");
@@ -254,32 +294,44 @@ function collision() {
 
 
 
-
-
-
-
 //what to do each frame
 function drawFrame () {
     ctx.clearRect(0, 0, 5000, 5000); // clears the entire canvas, has to be done first
 
-    circle.y = circle.y + gravity; // adding gravity to the circle
 
     // checking to see if the circle touches the bottom of the border, then set the center position to be equal to the border, but offset it by the radius, so the edge of the circle only touches the border. 
     //Runs every frame, which could be costly, but eh, needs to be checked, esp if i try to create a fluid
     //all the if statements here might need to be in a loop, to check every single circle
-    if (circle.y + circle.radius >= canvasHeight) {
-        circle.y = canvasHeight - circle.radius;
-    } 
     //checking to see if it touches the top
-    
-    
 
-    //draw the curcle
-    drawCircle(circle.x, circle.y, circle.radius);
+    // loop through every particle and do a check
+    for (let i=0; i < particles.length; i++) {
+        //draw every particle
 
-    console.log("new frame");
+        //find the x,y and the radius for the specific particle
+        let x = particles[i].x;
+        let y = particles[i].y;
+        let radius = particles[i].radius;
+        //drawing the circle
+        drawCircle(x,y,radius);
+
+        //then figure out what we need to do after we draw the circle
+
+        //applying gravity
+        particles[i].y = y + gravity;
+
+        //checking if we hit a border
+        if (y + radius >= canvasHeight) {
+            particles[i].y = canvasHeight - radius;
+        }
+    }
 }
 
 
 
 
+// what to do when the page loads
+document.addEventListener("DOMContentLoaded", function () {
+    firstDraw();
+    ram();
+})
