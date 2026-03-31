@@ -49,6 +49,17 @@
         <button  id="start">Start the Sim</button><br>
         <button  id="stop">Stop the Sim</button><br>
         <p id="sim">SIM stopped</p>
+
+
+        <h2>Documentation</h2>
+        <p>
+            Simple fluid sim, by essentially just simulating each particle (think of like a game engine, or a sandbox game with physics, essentially just putting alot of spheres into a box and making the size of the ball just really small). Due to limitations (skill issue on my behalf), its done in 2d, mostly cause i dont want to lose anymore years off my life trying to figure out openGL in javascript.
+
+            <br>
+            Just a warning, if youre on a laptop, or phone (heaven forbid), the sim might be really slow (like worse than a powerpoint slideshow slow), however, I found that my desktop performs the best, probably due to how im running the code, currently, everything runs on a single thread on your cpu, so CPU's that are good at single-threaded operations will be good. Although one of the optimizations that i can make is putting the physics calculations on a different thread (depending on if you device can support it, the rendering calculations will be made on the GPU/graphics processing part of your hardware if youre on a phone or something, or integrated graphics on a laptop for example, if you devide cant, then the rendering is done on the CPU, which usually means lower FPS, won't go onto a whole rant about it).
+            <br>
+            TLDR, essentially if your CPU sucks, this sim will suck too 
+        </p>
         
     </div>
 <script src="../../../JS/settingsLoader.js"></script>

@@ -3,7 +3,7 @@
 
 
 ## About the Site
-currently, the site has the most content under the meteorology section. But I do plan on adding more to the photography section, mostly adding more of my photos. I also plan on adding a portfolio section, which would include some coding-related things, and some of my best photos aswell.
+currently, the site has the most content under the meteorology section. But I do plan on adding more to the photography section, mostly adding more of my photos. I also plan on adding a portfolio section, which would include some coding-related things, and some of my best photos aswell. I have also been using it to mess around with random things in Javascript, with a couple (failed) attempts at games and other random programming-related things
 
 ## usage and sharing
 if you want to make suggestions, or fix something, feel free to do pull requests, i look at it frequently anyways.

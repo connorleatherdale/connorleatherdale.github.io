@@ -31,6 +31,10 @@ To-do (javascript)
                 - https://github.com/ercang/raytracer-js?tab=readme-ov-file 
 
 
+    - honestly might make a CM1 like program, or browser thing if i can
+        - would need to figure out openGL for that (fun)
+
+
 game
     - ideas
         - maybe like a side-scroller or something

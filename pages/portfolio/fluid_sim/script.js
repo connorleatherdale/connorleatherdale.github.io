@@ -25,6 +25,8 @@
 */
 
 
+// helper functions/things i cant be bothered to write a million times, or just random bits (like developer tools ig)
+
 // fps code, just checks the time between frames, and then shows it on the fps element in the html page
 var fps = document.getElementById("fps");
 var startTime = Date.now();
@@ -49,15 +51,16 @@ let RAMp = document.getElementById("ram");
 function ram() {
     if (window.performance && window.performance.memory) { // checks to see if the browser supports it
         const memoryInfo = window.performance.memory;
+        /*
+        // console logs to show how much memory and whatnot
         console.log(`Used Heap: ${memoryInfo.usedJSHeapSize} bytes`);
         console.log(`Total Heap: ${memoryInfo.totalJSHeapSize} bytes`);
         console.log(`Heap Limit: ${memoryInfo.jsHeapSizeLimit} bytes`);
+        */
 
         RAMp.innerHTML = "RAM usage: " + Math.floor((memoryInfo.totalJSHeapSize / 1024) / 1024) + "mb";
     }
 }
-
-
 
 
 
@@ -196,7 +199,7 @@ function stop() {
 
 
 
-
+// canvas related things
 // dealing with drawing to the canvas
 const canvas = document.getElementById("canvas");
 canvas.height = 1000;
@@ -208,6 +211,17 @@ const canvasWidth = canvas.width;
 
 const ctx = canvas.getContext('2d', { willReadFrequently: true });
 
+// clear canvas function
+function clearCanvas(consoleON) { // consoleON is just to see if you want to print a console log saying that the 
+    ctx.clearRect(0, 0, 5000, 5000);
+    if (consoleON == true) {
+        console.log("Canvas has been cleared");
+    }
+    
+}
+
+
+//global constants and variables
 
 // variables for storing the points
 let particles = []; // storing each particle as a object, with ID, center x,y and radius
@@ -222,7 +236,8 @@ const gravity = 9.81; //gravity constant (acceleration)
     what i need to do
         - create a loop at the start to create a grid of circles
         - do the collisions between each circle
-            - might be costly to do each frame, if i have a lot of circles
+            - might be costly to do each frame, if i have a lot of circles ), plot twist it is
+            - instead of looping over the entire array, find the closest particles 
 
 */
 
@@ -230,7 +245,7 @@ const gravity = 9.81; //gravity constant (acceleration)
 function firstDraw() {
     let x = 20; 
     let y = 20;
-    let radius = 2.5;
+    let radius = 10;
     for (let i = 0; i < 10000; i++) {
         //drawing the new circle
         ctx.beginPath();
@@ -261,7 +276,7 @@ function firstDraw() {
 console.log(particles);
 
 //function to draw the circle
-function drawCircle(x, y, radius) {
+function drawParticle(x, y, radius) {
     ctx.beginPath();
 
     ctx.arc(x,y,radius,0, Math.PI * 2, true); // arc(position X, position Y, radtius, start angle, stop angle, which way to draw)
@@ -284,19 +299,19 @@ function drawCircle(x, y, radius) {
 }
 
 
-// the physics part of everything
+// calculating the physics
 
-
-
-function collision() {
+// collision function (empty for now)
+function collision(targetX, targetY) {
     console.log("im just here as a placeholder");
+    // check to see if there are any nearby particles
 }
 
 
 
 //what to do each frame
 function drawFrame () {
-    ctx.clearRect(0, 0, 5000, 5000); // clears the entire canvas, has to be done first
+    clearCanvas(false); // clears the entire canvas, has to be done first (dont want a console command everytime a new frame is drawn)
 
 
     // checking to see if the circle touches the bottom of the border, then set the center position to be equal to the border, but offset it by the radius, so the edge of the circle only touches the border. 
@@ -313,7 +328,22 @@ function drawFrame () {
         let y = particles[i].y;
         let radius = particles[i].radius;
         //drawing the circle
-        drawCircle(x,y,radius);
+        drawParticle(x,y,radius);
+
+        //check to see if other particles overlap with our new particle (dont like how we are gonna have a loop inside a loop, not good for performance) NEEDS OPTIMIZATION
+        for (let j=0; j < particles.length; j++) { //fps goes from stable to 10fps with this loop wow
+            let newParticle = particles[i]; // current particle that we just spawned
+            let randomParticle = particles[j]; // random particle in the particles[] array
+            let distanceBetween = ((particles[i].x - particles[j].x)*(particles[i].x - particles[j].x) + ((particles[i].y - particles[j].y))*(particles[i].d - particles[j].d));
+            // the distance between the two particles (euclidean distance, essentially its the squareroot of the change of X squared + the squareroot of the change of Y squared. Due to performance concerns, we only use multiplication, hence why the equation looks a bit funky above
+
+            let overlap = (particles[i].radius + particles[j].radius) - distanceBetween;
+
+            // resolving if they overlap
+            if (distanceBetween < (particles[i].radius + particles[j].radius)){
+                console.log("the balls are touching");
+            }
+        }
 
         //then figure out what we need to do after we draw the circle
 
@@ -333,5 +363,5 @@ function drawFrame () {
 // what to do when the page loads
 document.addEventListener("DOMContentLoaded", function () {
     firstDraw();
-    ram();
+    setInterval(ram, 1000);
 })
