@@ -180,7 +180,8 @@ gl.drawArrays(gl.TRIANGLES, 0, 3);
 
 // listening to the buttons and seeing if we should start or stop the sim
 document.getElementById("start").addEventListener("click", Start);
-document.getElementById("stop").addEventListener("click", stop);
+document.getElementById("stop").addEventListener("click", Stop);
+document.getElementById("reset").addEventListener("click", resetSim);
 
 let SIM = document.getElementById("sim");
 
@@ -188,13 +189,23 @@ let interval;
 
 //start the sim
 function Start() {
-    interval = setInterval(drawFrame, 10); // draw a new frame every 10ms
+    interval = setInterval(drawFrame, tickLength); // draw a new frame every 10ms
     SIM.innerHTML = "SIM has started";
 }
 //stop the sim
-function stop() {
+function Stop() {
     clearInterval(interval);
     SIM.innerHTML = "SIM paused";
+}
+//reset the sim
+function resetSim() {
+    clearCanvas(false);
+
+    //delete the particles array
+    particles.length = 0; // sets the array to have no length, i think the sleep deprivation is hitting me causes its funny as hell
+
+    firstDraw();
+
 }
 
 
@@ -221,13 +232,19 @@ function clearCanvas(consoleON) { // consoleON is just to see if you want to pri
 }
 
 
+
 //global constants and variables
 
 // variables for storing the points
 let particles = []; // storing each particle as a object, with ID, center x,y and radius
 
-//some constants
+//some constants (some of these will be able to change per user request)
+//physics related
 const gravity = 9.81; //gravity constant (acceleration)
+const mass = 1; //mass of each value (arbitrary, but lets just say its in KG)
+
+//time related/non-physics constants
+const tickLength = 10; //how long each between each frame (in Ms)
 
 
 
@@ -241,7 +258,7 @@ const gravity = 9.81; //gravity constant (acceleration)
 
 */
 
-//draw a grid/line of circles
+//draw a grid of particles
 function firstDraw() {
     let x = 20; 
     let y = 20;
@@ -258,7 +275,8 @@ function firstDraw() {
                 "id": i, 
                 "x": x,
                 "y": y,
-                "radius": radius
+                "radius": radius, 
+                "mass": mass,
             }
         )
 
@@ -300,12 +318,21 @@ function drawParticle(x, y, radius) {
 
 
 // calculating the physics
+// anything in this could be moved to a different thread for performance (since this is the more performance heavy calculations), but thats a problem for later
 
 // collision function (empty for now)
-function collision(targetX, targetY) {
+function collision(targetX, targetY, radius) { // takes in a point (the center point and radius of the new particle we just drew)and checks if we hit another particle
     console.log("im just here as a placeholder");
     // check to see if there are any nearby particles
+    // i think what im going to do, since particles[0] starts at the top left, is for every particle, we check if any of the particles are below it, and if its between the rangle of x+radius and x-radius
+    for (let i=0;i<particles.length;i++) {
+
+    }
 }
+
+
+
+
 
 
 
@@ -330,20 +357,9 @@ function drawFrame () {
         //drawing the circle
         drawParticle(x,y,radius);
 
-        //check to see if other particles overlap with our new particle (dont like how we are gonna have a loop inside a loop, not good for performance) NEEDS OPTIMIZATION
-        for (let j=0; j < particles.length; j++) { //fps goes from stable to 10fps with this loop wow
-            let newParticle = particles[i]; // current particle that we just spawned
-            let randomParticle = particles[j]; // random particle in the particles[] array
-            let distanceBetween = ((particles[i].x - particles[j].x)*(particles[i].x - particles[j].x) + ((particles[i].y - particles[j].y))*(particles[i].d - particles[j].d));
-            // the distance between the two particles (euclidean distance, essentially its the squareroot of the change of X squared + the squareroot of the change of Y squared. Due to performance concerns, we only use multiplication, hence why the equation looks a bit funky above
-
-            let overlap = (particles[i].radius + particles[j].radius) - distanceBetween;
-
-            // resolving if they overlap
-            if (distanceBetween < (particles[i].radius + particles[j].radius)){
-                console.log("the balls are touching");
-            }
-        }
+        // check for collisions
+        collision(x,y,radius);
+        
 
         //then figure out what we need to do after we draw the circle
 
@@ -351,9 +367,16 @@ function drawFrame () {
         particles[i].y = y + gravity;
 
         //checking if we hit a border
-        if (y + radius >= canvasHeight) {
+        if (y + radius >= canvasHeight) { //if a particle hits the bottom
             particles[i].y = canvasHeight - radius;
         }
+        if (x + radius <= 0) { // if a particle hits the left side
+            particles[i].x = radius;
+        }
+        if (x + radius >= canvasWidth) { // if a particle hits the right side
+            particles[i].x = canvasWidth - radius;
+        }
+
     }
 }
 
