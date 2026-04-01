@@ -17,6 +17,7 @@ To-do (javascript)
 
     - create a projects/ portfolio page, with pages to random things ive tried to do.
         - make a calculator
+            - might throw that in with the number converter
         - to do list things that automatically adds and deletes things
         - weather app using weather api's
         - maybe a random quote generator (also using api's)
@@ -29,10 +30,27 @@ To-do (javascript)
                 - has been done before
                 - https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-ray-tracing/implementing-the-raytracing-algorithm.html
                 - https://github.com/ercang/raytracer-js?tab=readme-ov-file 
+        - number converter
+            - binary to numeral
+            - binary to hexadecimal
+            - hex to binary
+            - hex to numeral
+
+            - def might do this 
+
+        - file converter
+            - https://github.com/ConvertAPI/convertapi-library-js
+            - important to have all the processing done on the client side 
+                - i feel like there is no need for someone to upload a file to a server and then have it be processed there
+                - the goal is to process everything locally on the computer
+        
 
 
     - honestly might make a CM1 like program, or browser thing if i can
         - would need to figure out openGL for that (fun)
+        - could also use the canvas as a 2d "slice" aswell
+            - could use this for velocity, reflectivity, etc
+        
 
 
 game
