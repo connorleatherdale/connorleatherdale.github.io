@@ -262,7 +262,7 @@ const tickLength = 10; //how long each between each frame (in Ms)
 function firstDraw() {
     let x = 20; 
     let y = 20;
-    let radius = 10;
+    let radius = 2.5;
     for (let i = 0; i < 10000; i++) {
         //drawing the new circle
         ctx.beginPath();
@@ -279,6 +279,7 @@ function firstDraw() {
                 "mass": mass,
             }
         )
+        
 
         x = x + (radius*2) + 5;
         
@@ -292,6 +293,7 @@ function firstDraw() {
     }
 }
 console.log(particles);
+
 
 //function to draw the circle
 function drawParticle(x, y, radius) {
@@ -358,7 +360,7 @@ function drawFrame () {
         drawParticle(x,y,radius);
 
         // check for collisions
-        collision(x,y,radius);
+        //collision(x,y,radius);
         
 
         //then figure out what we need to do after we draw the circle
@@ -388,3 +390,4 @@ document.addEventListener("DOMContentLoaded", function () {
     firstDraw();
     setInterval(ram, 1000);
 })
+
