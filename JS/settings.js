@@ -83,7 +83,7 @@ function save() {
 
 
 // clearing the storage
-document.getElementById("clrLclStr").addEventListener("click", onClick) 
+document.getElementById("clrLclStr").addEventListener("click", onClick);
 
 function onClick(){
     localStorage.clear();

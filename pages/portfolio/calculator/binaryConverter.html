@@ -2,9 +2,12 @@
 
 <html>
     <head>
-        <title>Fluid Simulation</title>
+        <title>Binary Converter/calculator</title>
         <link rel="icon" type="image" href="../../../Images/image_1.jpg">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Decimal to binary, decimal to binary, binary calculator, ">
+        <meta name="description" content="A simpel binary calculator and a binary converter, converting from any number to binary, or in the reverse order">
+        <link rel="icon" type="image/x-icon" href="../../../../Images/image_1.jpg">
         <style>
             canvas{
                 border-style: solid;
@@ -39,14 +42,28 @@
 
     <div class="Body">
         <!--   
-            Regular Calculator
-            
+            Binary Converter/calulator
         -->
         
+        <h2>Binary Converter</h2>
+        <form>
+            <label>insert number</label>
+            <input type="number" id="input1">
+            <button type="button" name="calc" onclick="calculate()">calculate</button>
+            
+            <output id="output"></output>
+        </form>
         
         
+        
+
+        <br>
+        <h2>Documentation</h2>
+        <p>
+            havent bothered with this yet 
+        </p>
     </div>
 <script src="../../../JS/settingsLoader.js"></script>
-
+<script src="binary.js"></script>
 </body>
 </html>
