@@ -38,6 +38,9 @@ To-do (javascript)
 
             - def might do this 
 
+        - fluid sim
+            - might use p2.js for this, maybe before I do my own thing
+
         - file converter
             - https://github.com/ConvertAPI/convertapi-library-js
             - important to have all the processing done on the client side 
