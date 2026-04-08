@@ -8,11 +8,7 @@
         <meta name="keywords" content="Decimal to binary, decimal to binary, binary calculator, ">
         <meta name="description" content="A simpel binary calculator and a binary converter, converting from any number to binary, or in the reverse order">
         <link rel="icon" type="image/x-icon" href="../../../../Images/image_1.jpg">
-        <style>
-            canvas{
-                border-style: solid;
-            }
-        </style>
+        
         <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
       integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ=="
@@ -46,22 +42,49 @@
         -->
         
         <h2>Binary Converter</h2>
-        <form>
+        <form id="Form" name="forms">
+            <label>Select type conversion</label> <br>
+            <input type="radio" id="bin-dec" name="converter" value="bin-dec">
+            <label for="bin-dec">Binary To Decimal</label><br>
+
+            <input type="radio" id="dec-bin" name="converter" value="dec-bin">
+            <label for="dec-bin">Decimal To Binary</label><br>
+
+            <input type="radio" id="dec-hex" name="converter" value="dec-hex">
+            <label for="dec-hex">Decimal To Hex</label><br>
+
+            <input type="radio" id="bin-hex" name="converter" value="bin-hex">
+            <label for="bin-hex">Binary to Hex</label><br>
+
+            <br>
+
             <label>insert number</label>
-            <input type="number" id="input1">
+            <input type="text" id="input1">
             <button type="button" name="calc" onclick="calculate()">calculate</button>
             
-            <output id="output"></output>
+            <br>
+            <output id="output">Output: </output>
         </form>
         
+        <h2>Calculator (not finished) </h2>
         
         
 
         <br>
         <h2>Documentation</h2>
         <p>
-            havent bothered with this yet 
+            Number Converters <br><br>
+            how to use
+            <br>
+            To use the number converter, select the type of converter, each one lists what it does, then input the value in the insert number section. You can put text and numbers, either or (since hexadecimal is needed), numbers will work. if you include spaces in the input section, depending on the converter that im using, either a 0 will be outputted, or NaN (Not a Number).
+
         </p>
+        <p>
+            How the code works <br> <br>
+
+            As I have it right now. What I am doing is looking at the form above, looking through the buttons for the one that is selected, then we 
+        </p>
+
     </div>
 <script src="../../../JS/settingsLoader.js"></script>
 <script src="binary.js"></script>

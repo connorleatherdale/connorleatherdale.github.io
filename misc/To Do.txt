@@ -23,6 +23,12 @@ To-do (javascript)
         - maybe a random quote generator (also using api's)
         - create a game
 
+    - clock page (under the "subdomain")
+        - current time
+        - maybe have different timeszones/cities aswell 
+            - would have to probably keep a thing, idk
+            - maybe an api to check the timezone of a city?
+
     - ideas for js
         - create a rendering system
             - would be bound by the cpu
@@ -36,16 +42,20 @@ To-do (javascript)
             - hex to binary
             - hex to numeral
 
-            - def might do this 
-
         - fluid sim
             - might use p2.js for this, maybe before I do my own thing
+
+        - powder simulation (like the powder toy)
+            - self explanatory
+            - would have to figure out a grid system to draw pixels
+                - implement a simple thing to create falling sand
 
         - file converter
             - https://github.com/ConvertAPI/convertapi-library-js
             - important to have all the processing done on the client side 
                 - i feel like there is no need for someone to upload a file to a server and then have it be processed there
                 - the goal is to process everything locally on the computer
+                - this would be a major thing/basis of most, if not all, of my work, 
         
 
 
