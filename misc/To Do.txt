@@ -28,6 +28,9 @@ To-do (javascript)
         - maybe have different timeszones/cities aswell 
             - would have to probably keep a thing, idk
             - maybe an api to check the timezone of a city?
+    
+    - youtube video downloader
+        - all on the clientside of things aswell
 
     - ideas for js
         - create a rendering system
