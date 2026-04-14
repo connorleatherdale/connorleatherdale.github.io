@@ -70,6 +70,9 @@ To-do (javascript)
 
 
 game
+    - use indexedDB to store console/log entries or something
+
+
     - ideas
         - maybe like a side-scroller or something
         - open world rpg maybe
