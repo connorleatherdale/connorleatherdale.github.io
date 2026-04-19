@@ -392,6 +392,7 @@ ul.topnav li a:hover {
   border-style: solid;
   background-attachment: fixed;
   height: auto;
+  float: left;
   
 }
 
@@ -400,6 +401,7 @@ ul.topnav li a:hover {
   backgrounds for .content{} will be handled in the HTML file itself
 */
 .content {
+  float: right;
   flex: 80%;
   padding: 20px;
   
@@ -408,6 +410,8 @@ ul.topnav li a:hover {
   border-style: solid;
   border-width: 2px;
   border-radius: 5px;
+
+  
   
 
 }
