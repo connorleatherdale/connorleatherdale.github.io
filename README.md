@@ -38,8 +38,14 @@ If you're curious on some of my plans, if you go to misc -> Ideas.txt, you can f
 
 started this since i found out you could host websites on github pages, and i was wanting to host a personal website and all, so i started to work on this. Mostly just a place for me to talk my heart out about stuff I love, thats all. 
 
+## Github section
+### Releases
+
+right now i have included an .exe file for the site. I am using electron to wrap the site into this .exe file. There is really no reason for me to do this, although i did do it just as an example/try, to figure out how to use electron. (you might find some random bits in my To Do text file, if you ever so curious). I plan to use this for different things, like meteorology-related things, and maybe even something like a game, or something to even simulate storms!
+
 # Documentation
 ## portfolio/programming section
 ### Fluid sim
 
 The fluid sim is just a side-project of mine, as I wanted to get into some physics calculations (was thinking about creating my own physics engine, but thats a future project) What i currently have is a 2d simulation of fluid particles. Essentially all what im doing is creating a really basic physics engine and then essentially just adding several "particles" that can interact with eachother. If you have ever messed around with a game engine before, or have played really any type of open-word physics game, you might be familiar. Lets just take a game like minecraft. Lets say we have a pen of sheep. What im doing is just putting a bunch of sheep into that pen, and by using the fact that the sheep collide, we can make a fluid simulation out of that. But instead of it being a horizontal pen, its vertical, so gravity is taken into account. Thats the basic idea of what im doing, except instead of using a game, or game engine, im just making my own, which is much harder than it seems, mostly due to the fact that im doing everything from scratch (and math is not my strong suit).
+
