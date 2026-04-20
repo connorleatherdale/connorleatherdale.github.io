@@ -198,3 +198,18 @@ Overall design of the website
     - create and design animations for everything
     - probably create some sort of "dual" page design, for separating my photography and my yapping for meteorology
     - 
+
+
+
+
+
+When it comes to creating an .exe file with electron
+
+installing electrion
+    - npm init (innitialize the npm thing for your specific folder)
+    - npm init -y
+    - npm install electron --save-dev (this actually installs electron)
+    - npm install electron-packager --save-dev (install the electron packager)
+
+running the packager
+    - npx electron-packager . my-app --platform=win32 --arch=x64 (this creates the exe)
