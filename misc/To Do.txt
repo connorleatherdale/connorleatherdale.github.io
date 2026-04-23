@@ -92,8 +92,23 @@ game
         - https://medium.com/analytics-vidhya/how-to-build-your-first-desktop-application-in-python-7568c7d74311
 
 
+weather app (might make a standalone app, maybe with electron?)
+    - figure out api usage and whatnot
+    - def wanna do a per-site basis 
+        - hopefully both canadian, and american radar data
+        - sprinkle in more random ones and whatnot
+    
 
 
+
+
+
+
+
+
+
+
+// these two could probably be grouped together
 What are radars?
     - talk about what a radar is, what those weird white balls you sometimes see along the road
     - talk about the different kinds of radars, and what each country uses
@@ -104,6 +119,8 @@ radar sites around the world
     - sort by country
     - talk about what each countries use for their weather radars
     - possibly talk about some of my favourite/most interesting radar sites 
+
+
 
 
 What is the EF-scale? (done)
