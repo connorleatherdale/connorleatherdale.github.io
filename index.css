@@ -75,10 +75,23 @@ body {
 
 .content h1,h2,h3,h4,h4,h6 { /* centering all the headers to the center of the page */
     text-align: center;
+    color: #dddddd;
+    text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .content p {
     text-align: justify;
     padding-left: 10px;
     padding-right: 10px;
+
+    color: #dddddd;
+    text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
