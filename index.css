@@ -1,0 +1,84 @@
+/*
+    CSS file for styling the main "front" pages (like the ones you see in the header up top, ones for naviagting the page)
+*/
+
+
+.header {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: linear-gradient(to bottom right, #ffffff, #999796);
+    border-style: solid;
+    border-color: black;
+
+}
+
+body {
+    margin: 0;
+    padding: 0; 
+}
+
+
+/*
+    this is for styling the header and getting it to work right
+*/
+.topnav {
+    list-style-type: none;
+    background-color: black;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    width: 100%;
+}
+.topnav li {
+    float: left;
+    width: 20%;
+}
+
+.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+
+}
+
+.topnav li a:hover {
+    background-color: white;
+    color: black;
+}
+
+.topnav li a.active {
+    background-color: grey;
+    color: black;
+}
+
+
+
+
+/* styling the content sections */
+.content {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+
+    border-style: solid;
+    border-color: black;
+    
+}
+
+.content h1,h2,h3,h4,h4,h6 { /* centering all the headers to the center of the page */
+    text-align: center;
+}
+
+.content p {
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+}
