@@ -1,5 +1,5 @@
 /*
-    CSS file for styling the main "front" pages (like the ones you see in the header up top, ones for naviagting the page)
+    CSS file for styling the main "front" pages (like the ones you see in the header up top, ones for naviagting the page) along with any other random things that need this for some reason
 */
 
 
@@ -87,6 +87,7 @@ body {
     text-align: justify;
     padding-left: 10px;
     padding-right: 10px;
+    font-size: larger;
 
     color: #dddddd;
     text-shadow: 
@@ -94,4 +95,49 @@ body {
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+
+/* make sure that ordered/unordered lists are also properly done too in .content {} */
+
+.content li {
+    text-shadow: 
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+    color: #dddddd;
+}
+
+.content a:link {
+    text-shadow: 
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+    color: #dddddd;
+  }
+  
+.content a:visited {
+    text-shadow: 
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+    color: #dddddd;
+  }
+  
+.content a:hover {
+    text-shadow: 
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+    color: aqua;
+  }
+
+
+/* for the centered class */
+
+.content .centered {
+    text-align: center;
 }
