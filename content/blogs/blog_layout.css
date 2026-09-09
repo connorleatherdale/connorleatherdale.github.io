@@ -1,69 +1,17 @@
 /*
-    CSS file for styling the main "front" pages (like the ones you see in the header up top, ones for naviagting the page) along with any other random things that need this for some reason
+    sorting out the image nonesense
 */
 
 
-.header {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-image: linear-gradient(to bottom right, #ffffff, #999796);
-    border-style: solid;
-    border-color: black;
-
-}
-
-body {
-    margin: 0;
-    padding: 0; 
-}
-
-
-/*
-    this is for styling the header and getting it to work right
-*/
-.topnav {
-    list-style-type: none;
-    background-color: black;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-
-    width: 100%;
-}
-.topnav li {
+img {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
     float: left;
-    width: 20%;
 }
-
-.topnav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    
-
-}
-
-.topnav li a:hover {
-    background-color: white;
-    color: black;
-}
-
-.topnav li a.active {
-    background-color: grey;
-    color: black;
-}
-
-
-
 
 /* styling the content sections */
-.content {
+.Content {
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 5%;
@@ -73,7 +21,7 @@ body {
     
 }
 
-.content h1,h2,h3,h4,h4,h6 { /* centering all the headers to the center of the page */
+.Content h1,h2,h3,h4,h4,h6 { /* centering all the headers to the center of the page */
     text-align: center;
     color: #dddddd;
     text-shadow: 
@@ -84,7 +32,7 @@ body {
     font-size: xx-large;
 }
 
-.content p {
+.Content p {
     text-align: justify;
     padding-left: 10px;
     padding-right: 10px;
@@ -96,11 +44,13 @@ body {
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
+
+    overflow: auto; /* *IMPORTANT, without this, all the images cause it to "pancake" (image inside <p> not included in its size, messing everything up) */
 }
 
 /* make sure that ordered/unordered lists are also properly done too in .content {} */
 
-.content li {
+.Content li {
     text-shadow: 
       -1px -1px 0 #000,
       1px -1px 0 #000,
@@ -110,7 +60,7 @@ body {
     font-size: large;
 }
 
-.content a:link {
+.Content a:link {
     text-shadow: 
       -1px -1px 0 #000,
       1px -1px 0 #000,
@@ -120,7 +70,7 @@ body {
     font-size: large;
   }
   
-.content a:visited {
+.Content a:visited {
     text-shadow: 
       -1px -1px 0 #000,
       1px -1px 0 #000,
@@ -130,7 +80,7 @@ body {
     font-size: large;
   }
   
-.content a:hover {
+.Content a:hover {
     text-shadow: 
       -1px -1px 0 #000,
       1px -1px 0 #000,
@@ -140,10 +90,7 @@ body {
     font-size: large;
   }
 
-
-/* for the centered class */
-
-.content .centered {
+.Content .centered {
     text-align: center;
 }
 
