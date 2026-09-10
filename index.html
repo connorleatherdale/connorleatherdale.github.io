@@ -18,6 +18,7 @@
                 
             }
         </style>
+        
     </head>
     <body>
         
@@ -49,19 +50,25 @@
             <p>
                 N/A
             </p>
-            <h2>Change-list</h2>
+            <div class="change-log">
+                <button class="change-log" id="change">Change-log</button>
+            </div>
+            
             <p class="centered">
                 (click on the Title above to expand) <br>
                 The classic "version x.xx.xx" blah blah blah you see all the time in programming, taken straight from each commit that you can find on my <a href="https://github.com/connorleatherdale/connorleatherdale.github.io/tree/main" target="_blank">Github</a> page for this site
             </p>
-            <div class="changelog">
+            <div class="changelog" id="changelog">
                 <p>
                     <ul>
                         <li>
-                            v0.2 -- Porting of Oakville porting over the Oakville blog post also changed a few things and still figuring out the layout of the site (specifically the layout for blogs)
+                            v0.2.1 updated changlog in Index: updated it and also added javascript for the first time to this new version. added a button to show/hide the changelog, since i expect it to become insanely long eventually
                         </li>
                         <li>
-                            v0.1 -- added the "front" pages (about me and some pages that just link to other parts of the site) along with styling them and adding in basic     content/general outlines
+                            v0.2 -- Porting of Oakville porting over the Oakville blog post: also changed a few things and still figuring out the layout of the site (specifically the layout for blogs)
+                        </li>
+                        <li>
+                            v0.1 -- added the "front" pages: (about me and some pages that just link to other parts of the site) along with styling them and adding in basic     content/general outlines
                         </li>
                 </ul>
                 
@@ -72,5 +79,7 @@
 
             
         </div>
+
+        <script src="index.js"></script>
     </body>
 </html>

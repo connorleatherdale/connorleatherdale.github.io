@@ -147,3 +147,14 @@ body {
     text-align: center;
 }
 
+
+.content .change-log {
+    text-align: center;
+    background-color: rgb(252, 252, 252, 0);
+    color: white; 
+    
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
