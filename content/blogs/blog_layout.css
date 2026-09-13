@@ -17,18 +17,14 @@ img {
     margin-bottom: 5%;
 
     border-style: solid;
-    border-color: black;
+    border-color: hsl(199 100% 18%);
+    background-color: hsl(203 100% 13%);
     
 }
 
 .Content h1,h2,h3,h4,h4,h6 { /* centering all the headers to the center of the page */
     text-align: center;
-    color: #dddddd;
-    text-shadow: 
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+    color: hsl(204 100% 94%);
     font-size: xx-large;
 }
 
@@ -38,12 +34,7 @@ img {
     padding-right: 10px;
     font-size: large;
 
-    color: #dddddd;
-    text-shadow: 
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+    color: hsl(203 74% 68%);
 
     overflow: auto; /* *IMPORTANT, without this, all the images cause it to "pancake" (image inside <p> not included in its size, messing everything up) */
 }
@@ -51,41 +42,22 @@ img {
 /* make sure that ordered/unordered lists are also properly done too in .content {} */
 
 .Content li {
-    text-shadow: 
-      -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-      1px 1px 0 #000;
-    color: #dddddd;
+  color: hsl(203 74% 68%);
     font-size: large;
 }
 
 .Content a:link {
-    text-shadow: 
-      -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-      1px 1px 0 #000;
-    color: #dddddd;
+  color: hsl(203 74% 68%);
     font-size: large;
   }
   
 .Content a:visited {
-    text-shadow: 
-      -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-      1px 1px 0 #000;
-    color: #dddddd;
+  color: hsl(203 74% 68%);
     font-size: large;
   }
   
 .Content a:hover {
-    text-shadow: 
-      -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-      1px 1px 0 #000;
+    
     color: aqua;
     font-size: large;
   }
