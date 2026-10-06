@@ -1,0 +1,11 @@
+.time {
+    position: fixed;
+    top: 0%;
+    right: 45%;
+    width: 10%;
+    
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+
+}
