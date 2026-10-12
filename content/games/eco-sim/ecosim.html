@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Connor Leatherdale/content/eco-sim/ecosim.html</title>
+        <meta charset="UTF-8">
+        
+        <meta name="author" content="Connor Leatherdale">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="ecosim.css">
+        <style>
+            body {
+                background-color:hsl(0, 0%, 100%);
+                background-repeat: no-repeat;
+                background-position: top;
+                background-attachment: fixed;
+                background-size: cover;
+                
+            }
+        </style>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5128944007806948"
+        crossorigin="anonymous"></script>
+        <meta name="google-site-verification" content="cLTp5w7exi6-0c8lPxdHKItg9kIl41x1IN8jdB-NDLA" />
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJEKCC4EGF"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-MJEKCC4EGF');
+        </script>
+        
+    </head>
+    <body>
+        <div class="time">
+            <p id="date">January 1, 0 </p>
+            <p id="timeMultiplier">1x</p>
+        </div>
+        <div class="debug" id="debug">
+            <p id="fps">fps</p>
+        </div>
+        
+        <script type="module" src="Game_engine.js"></script>
+        <script type="module" src="dates.js"></script>
+        <script src="debug.js"></script>
+    </body>
+</html>

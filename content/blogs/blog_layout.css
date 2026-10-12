@@ -1,0 +1,85 @@
+/*
+    sorting out the image nonesense
+*/
+
+
+img {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+/* styling the content sections */
+.Content {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+
+    border-style: solid;
+    border-color: hsl(199 100% 18%);
+    background-color: hsl(203 100% 13%);
+    
+}
+
+.Content h1,h2,h3,h4,h4,h6 { /* centering all the headers to the center of the page */
+    text-align: center;
+    color: hsl(204 100% 94%);
+    font-size: xx-large;
+}
+
+.Content p {
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: large;
+
+    color: hsl(203 74% 68%);
+
+    overflow: auto; /* *IMPORTANT, without this, all the images cause it to "pancake" (image inside <p> not included in its size, messing everything up) */
+}
+
+/* make sure that ordered/unordered lists are also properly done too in .content {} */
+
+.Content li {
+  color: hsl(203 74% 68%);
+    font-size: large;
+}
+
+.Content a:link {
+  color: hsl(203 74% 68%);
+    font-size: large;
+  }
+  
+.Content a:visited {
+  color: hsl(203 74% 68%);
+    font-size: large;
+  }
+  
+.Content a:hover {
+    
+    color: aqua;
+    font-size: large;
+  }
+
+.Content .centered {
+    text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-auto-rows: 5;
+  grid-auto-columns: 4;
+  grid-template-columns: repeat(4, 1fr);
+  width: 90%;
+  height: min-content;
+  row-gap: 25px;
+  column-gap: 25px;
+  padding-left: 10px;
+}
+
+.gallery div {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; 
+}

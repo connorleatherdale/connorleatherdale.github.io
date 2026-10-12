@@ -1,27 +1,25 @@
-// main.js
-const { app, BrowserWindow, ipcMain, dialog } = require('electron');
-const path = require('path');
+// file for the javascript used in the index html page
 
-function createWindow() {
-  const win = new BrowserWindow({
-    width: 1000,
-    height: 700,
-    webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
-      contextIsolation: true,
-      nodeIntegration: false
+
+
+// code to show/hide the changelog
+// starting off with variables and setting things
+
+let cl = document.getElementById("changelog");
+let changeLogHidden = true; //start with the changelog hidden, to save space (maybe just show the latest changelog, might do that in the settings page or something idk)
+cl.hidden = true;
+
+//add an event listener so when the user clicks on the button, something actually happens
+document.getElementById("change").addEventListener("click", changelog);
+
+function changelog() {
+    
+    if (changeLogHidden == true) {
+        changeLogHidden = false;
+        cl.hidden = false;
+    } else if (changeLogHidden == false) {
+        changeLogHidden = true;
+        cl.hidden = true;
     }
-  });
-
-  win.loadFile('index.html');
+    console.log(changeLogHidden);
 }
-
-app.whenReady().then(createWindow);
-
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') app.quit();
-});
-
-// IPC handlers
-ipcMain.handle('get-version', () => app.getVersion());
-ipcMain.handle('show-dialog', () => dialog.showMessageBox({ message: 'Hello!' }));
